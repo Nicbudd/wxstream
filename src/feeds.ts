@@ -18,19 +18,21 @@ export class Feed {
             if (poller === undefined) {
                 poller = new Poller(ch, poll_freq, this);
                 pollers.set(ch, poller)
-            } 
-
-            poller.addFeed(this)
+            } else {
+                poller.addFeed(this)
+            }
         }
     }
 
-    addMessage(message: string) {
-        const element = document.createElement("div")
-        element.classList.add("message")
-        element.innerHTML = message
-        this.element.prepend(element);
-        // console.log(this.element.innerHTML)
-        // this.element.innerHTML = this.element.innerHTML + "<br>" + message;
+    addMessage(message: string, link: string) {
+        const e = document.createElement("a")
+        e.classList.add("message");
+        e.setAttribute("href", link);
+        e.setAttribute("target", "_blank");
+        e.setAttribute("rel", "noopener noreferrer"); 
+        // thanks https://stackoverflow.com/questions/17711146/how-to-open-link-in-a-new-tab-in-html
+        e.innerHTML = message
+        this.element.prepend(e);
     }
 
     addErrorMessage(message: string) {
@@ -56,6 +58,7 @@ interface FeedConfiguration {
 }
 
 export type ThemeClass = "red" | "green" | "blue" | "purple" | "orange" | "black" | "white" |
-"redbg" | "greenbg" | "bluebg" | "purplebg" | "orangebg" | "blackbg" | "whitebg";
+    "redbg" | "greenbg" | "bluebg" | "purplebg" | "orangebg" | "blackbg" | "whitebg" | 
+    "bold" | "extra-bold" | "emergency";
 
 // light configuration

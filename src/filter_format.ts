@@ -1,6 +1,12 @@
 import { Feed } from "./feeds";
 
+import dayjs from 'dayjs';
+import utc from 'dayjs/plugin/utc';
+
+dayjs.extend(utc);
+
 export function addNewRawMessages(feed: Feed, messages: Array<any>) {
+    console.log(feed, messages)
     for (const message of messages) {
         addNewRawMessage(feed, message)
     } 
@@ -31,13 +37,27 @@ function addNewRawMessage(feed: Feed, message: any) {
         txt = txt.replaceAll(th[0], (match) => `<span class="${classList}">${match}</span>`)
     }
 
-    // console.log(txt)
-
-    feed.addMessage(txt)
+    const time = dayjs(message["ts"] + " +0000", "YYYY-MM-DD HH:mm:ss ZZ")
+    const formatted_time = time.utc().format("HH:mm:ss")
+    // const time = "12:34:56";
+    txt = `<span class='time'>${formatted_time}</span> ${txt}`
+    
+    const link = getLink(message["message"]);
+    feed.addMessage(txt, link)
 }
 
 // https://stackoverflow.com/questions/822452/strip-html-tags-from-text-using-plain-javascript/47140708#47140708
-function strip(html: string){
+function strip(html: string): string {
     let doc = new DOMParser().parseFromString(html, "text/html");
     return doc.body.textContent || "";
+}
+
+function getLink(html: string): string {
+    let doc = new DOMParser().parseFromString(html, "text/html");
+    let linktag = doc.getElementsByTagName("a")[0];
+    if (linktag === undefined) {
+        return ""
+    } else {
+        return linktag.getAttribute("href") || "";
+    }
 }

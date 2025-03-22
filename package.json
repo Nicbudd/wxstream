@@ -2,6 +2,7 @@
   "dependencies": {
     "@xmpp/client": "^0.13.4",
     "@xmpp/debug": "^0.13.3",
+    "dayjs": "^1.11.13",
     "idle-tracker": "^0.1.3",
     "jquery": "^3.7.1"
   },

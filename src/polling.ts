@@ -44,6 +44,17 @@ function pollChannel(poller: Poller) {
     
     console.log(`Pinging channel ${poller.channel}`)
 
+    if (poller.channel == "test") {
+        for (const f of poller.feeds) {
+            var msgs: Array<Object> = [];
+            for (const txt of test_msgs) {
+                msgs.push({"message": txt, "ts": "2000-01-01 00:00:00", "seqnum": 0})
+            }
+            addNewRawMessages(f, msgs)
+        }
+        return
+    }
+
     var req = $.ajax({
         dataType : "json",
         url: `${proxy_url}?https://weather.im/iembot-json/room/${poller.channel}?seqnum=${poller.seqnum}`,
@@ -67,5 +78,16 @@ function pollChannel(poller: Poller) {
         }
     })
 }
+
+const test_msgs = [
+    "BOX issues Tornado Warning for Hillsborough [NH]",
+    "BOX issues Tornado Emergency for Middlesex [MA]",
+    "BOX issues Flash Flood Warning",
+    "BOX expires Flash Flood Warning",
+    "BOX issues Flood Warning",
+    "BOX expires Flood Warning",
+    "BOU issues Geomagnetic Storm Warning for Aurora, CO",
+    "4 ENE Hanover [Oxford Co, ME] Fire Dept/Rescue reports Ice Jam at 10:00 AM EDT -- A mile long ice jam was present along the Androscoggin River along Rumford Center. The jam was not resulting in flooding at the time of the report."
+]
 
 const proxy_url="https://cloudflare-cors-anywhere.niczippy775894.workers.dev/"

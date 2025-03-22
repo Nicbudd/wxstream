@@ -1,3 +1,10 @@
+.purple {
+    color: #7c56b5 !important;
+}
+.purplebg {
+    background: #7c56b5 !important;
+}
+
 .blue {
     color: #316fa6 !important;
 }
@@ -38,4 +45,28 @@
 }
 .blackbg {
     background: #303030 !important;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.extra-bold {
+    font-weight: 900;
+}
+
+.emergency {
+    font-weight: 900;
+    animation: emergency 3s infinite;
+}
+
+@keyframes emergency {
+    0%, 100% {
+        color: var(--black);
+        background-color: var(--red);
+    }
+    50% {
+        color: var(--red);
+        background-color: var(--white);
+    }
 }
