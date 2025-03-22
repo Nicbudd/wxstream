@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 @import url('./IosevkaNicbuddSansV1/IosevkaNicbuddSansV1.css');
 @import url('./IosevkaNicbuddSlabV1/IosevkaNicbuddSlabV1.css');
+@import url('./textThemes.css');
 
 :root{
 	--white: #E6E6E6;

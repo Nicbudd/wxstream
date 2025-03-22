@@ -24,12 +24,12 @@ function addNewRawMessage(feed: Feed, message: any) {
         }
     }
 
-    // // themes
-    // for (const th of feed.config.themes) {
-    //     const classList = th[1].join(", ");
-    //     // var sdfff: String = String(txt)
-    //     txt = th[0].replaceAll(txt, `<span class="${classList}">$0</span>`)
-    // }
+    // themes
+    for (const th of feed.config.themes) {
+        const classList = th[1].join(" ");
+        // var sdfff: String = String(txt)
+        txt = txt.replaceAll(th[0], (match) => `<span class="${classList}">${match}</span>`)
+    }
 
     // console.log(txt)
 

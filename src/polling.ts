@@ -9,12 +9,15 @@ var i = 0;
 export class Poller {
     channel: string;
     feeds: Array<Feed>;
-    seqnum: number
+    seqnum: number;
+    suspended: boolean;
 
-    constructor(channel: string, poll_freq: number) {
+    constructor(channel: string, poll_freq: number, feed: Feed) {
         this.channel = channel;
         this.feeds = [];
         this.seqnum = 0;
+        this.suspended = false;
+        this.feeds.push(feed);
         pollChannel(this);
         setInterval(pollChannel, poll_freq, this)
     }
@@ -22,14 +25,24 @@ export class Poller {
     addFeed(feed: Feed) {
         this.feeds.push(feed)
     }
+    suspend() {
+        this.suspended = true
+    }
+    unsuspend() {
+        this.suspended = false
+    }
 }
 
 function pollChannel(poller: Poller) {
-    console.log(`Pinging channel ${poller.channel}`)
-
+    
     if (poller.feeds.length <= 0) {
         return
     }
+    if (poller.suspended) {
+        return
+    }
+    
+    console.log(`Pinging channel ${poller.channel}`)
 
     var req = $.ajax({
         dataType : "json",

@@ -6,7 +6,10 @@
       "outDir": "./dist",
       "rootDir": "./src",
       "esModuleInterop": true,
-      // "lib": ["ES2024.String"]
+      "lib": [
+        "ES2021",
+        "dom"
+      ]
     },
     "include": ["src"]
   }

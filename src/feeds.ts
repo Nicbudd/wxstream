@@ -16,7 +16,7 @@ export class Feed {
 
             var poller = pollers.get(ch);
             if (poller === undefined) {
-                poller = new Poller(ch, poll_freq);
+                poller = new Poller(ch, poll_freq, this);
                 pollers.set(ch, poller)
             } 
 

@@ -16,12 +16,14 @@ $(function() {
 })
 
 
+
+
 const standard_blacklist = [/PIREP/, /Climate Report:/, /Routine pilot report/, 
     /Terminal Aerodrome Forecast/, /SIGMET/, /Zone Forecast Package/, 
-    /Area Forecast Discussion/, /^METAR/]
+    /Area Forecast Discussion/, /^METAR/, /^METAR/]
 
 const standard_colorizing: Array<[RegExp, Array<ThemeClass>]> = [
-    // (/\[[^\]]*(GYX|BOX|BOS|BTV|NH|ME|VT|MA|MASS|CT|RI|Manchester,? NH)[^\[]*\]/, ["whitebg", "black"])
+    [/\[[^\]]*(GYX|BOX|BOS|BTV|NH|ME|VT|MA|MASS|CT|RI|Manchester,? NH)[^\[]*\]/g, ["whitebg", "black"]]
 ]
 
 const prebuiltFeeds = {
