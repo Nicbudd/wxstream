@@ -111,3 +111,29 @@ body {
 .responseWait {
     background: #c14747 !important;
 }
+
+#idlescreen {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(16px);
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#idlescreen .title {
+    font-weight: 900;
+    font-size: 32px;
+    padding: 0 1em;
+}
+
+#idlescreen .content {
+    font-size: 16px;
+    padding: 0 1em;
+}
+
+.none {
+    display: none !important;
+}

@@ -22,8 +22,6 @@ export class Feed {
 
             poller.addFeed(this)
         }
-
-        feeds.push(this)
     }
 
     addMessage(message: string) {
