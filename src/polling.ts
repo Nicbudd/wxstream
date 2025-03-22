@@ -6,88 +6,42 @@ const ajax_timeout = 3000; // 3s timeout
 
 var i = 0;
 
-var prev_seqnum = 0;
-var new_seqnum = 0;
-
-var new_messages: Map<string, Poller> = new Map();
-
-// export function refreshAll(feeds: any) {
-//     // make the blinker slowly turn red while we wait
-//     // $("#blinker").addClass("responseWait")
-
-//     new_messages = new Map();
-
-//     // make the calls
-//     for (const f of feeds) {
-//         pollChannel(f)
-//     }
-
-//     prev_seqnum = new_seqnum
-
-
-//     // // fake delay of 500ms for now
-//     // setTimeout(function() {
-
-
-
-
-//     //     // // when the call returns successful, add the blink animation class
-//     //     // $("#blinker").removeClass("responseWait")
-//     //     // $("#blinker").addClass("blinkAnimation")
-//     //     // setTimeout(function() {
-//     //     //     $("#blinker").removeClass("blinkAnimation")
-//     //     // }, 2000)
-
-//     //     // handle the returned data
-
-//     //     // for (const f of feeds) {
-//     //     //     for (const channel of f.config.channels) {
-//     //     //         console.log(channel, new_messages)
-//     //     //         const messages = new_messages.get(channel);
-//     //     //         console.log(messages)
-//     //     //         if (messages !== undefined) {
-//     //     //             for (const message of messages) {
-//     //     //                 f.addMessage(message)
-//     //     //             }
-//     //     //         } else {
-//     //     //             console.log(messages)
-//     //     //         }
-//     //     //     }
-//     //     // }
-
-
-//     // }, 500)
-// }
-
-class Poller {
+export class Poller {
     channel: string;
     feeds: Array<Feed>;
     seqnum: number
 
-    constructor(channel: string, feed: Feed, poll_freq: number) {
+    constructor(channel: string, poll_freq: number) {
         this.channel = channel
-        this.feeds = [feed]
+        this.feeds = []
         this.seqnum = 0
         setInterval(pollChannel, poll_freq, this)
+    }
+
+    addFeed(feed: Feed) {
+        this.feeds.push(feed)
     }
 }
 
 function pollChannel(poller: Poller) {
+    console.log(poller)
+
+    if (poller.feeds.length <= 0) {
+        return
+    }
+
     var req = $.ajax({
         dataType : "json",
-        url: `${proxy_url}?https://weather.im/iembot-json/room/${poller.channel}?seqnum=${prev_seqnum}`,
+        url: `${proxy_url}?https://weather.im/iembot-json/room/${poller.channel}?seqnum=${poller.seqnum}`,
         // upon success do this
         success: function(data) {
             const channel_messages = data["messages"]
 
-            var seqnum;
             if (channel_messages.length > 0) {
-                seqnum = channel_messages.at(-1)["seqnum"]
-            } else {
-                seqnum = new_messages
+                poller.seqnum = channel_messages.at(-1)["seqnum"]
             }
             
-            console.log("New messages:", new_messages, seqnum)
+            console.log("New messages:", channel_messages, poller.seqnum)
 
             for (const f of poller.feeds) {
                 addNewRawMessages(f, channel_messages)

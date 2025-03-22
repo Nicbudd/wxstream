@@ -1,15 +1,29 @@
 import $ from 'jquery';
+import { Poller } from "./polling"
 
 export class Feed {
     config: FeedConfiguration;
     element: HTMLDivElement;
 
-    constructor(config: FeedConfiguration) {
+    constructor(config: FeedConfiguration, feeds: Array<Feed>, pollers: Map<string, Poller>, poll_freq: number) {
         const element = document.createElement("div")
         element.classList.add("feed")
         addToFeedGrid(element)
         this.config = config
         this.element = element
+
+        for (const ch of config.channels) {
+
+            var poller = pollers.get(ch);
+            if (poller === undefined) {
+                poller = new Poller(ch, poll_freq);
+                pollers.set(ch, poller)
+            } 
+            
+            poller.addFeed(this)
+        }
+
+        feeds.push(this)
     }
 
     addMessage(message: string) {
@@ -35,7 +49,7 @@ export function addToFeedGrid(element: HTMLDivElement) {
 }
 
 interface FeedConfiguration {
-    channel: Array<string>;
+    channels: Array<string>;
     whitelist: Array<RegExp>;
     blacklist: Array<RegExp>;
     themes: Array<[RegExp, Array<ThemeClass>]>;
@@ -48,7 +62,7 @@ type ThemeClass = "red" | "green" | "blue" | "purple" | "orange" | "black" | "wh
 
 export const prebuiltFeeds = {
     default: {
-        channel: "botstalk",
+        channels: ["botstalk"],
         whitelist: [],
         blacklist: [],
         themes: []
