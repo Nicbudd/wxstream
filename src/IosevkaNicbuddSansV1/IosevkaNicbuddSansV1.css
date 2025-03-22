@@ -1,0 +1,1260 @@
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 100;
+	font-stretch: normal;
+	font-style: normal;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-Thin.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 100;
+	font-stretch: expanded;
+	font-style: normal;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-ExtendedThin.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 100;
+	font-stretch: condensed;
+	font-style: normal;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-CondensedThin.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 100;
+	font-stretch: ultra-expanded;
+	font-style: normal;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-UltraExtendedThin.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 100;
+	font-stretch: normal;
+	font-style: oblique;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-ThinOblique.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web Oblique';
+	font-display: swap;
+	font-weight: 100;
+	font-stretch: normal;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-ThinOblique.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 100;
+	font-stretch: expanded;
+	font-style: oblique;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-ExtendedThinOblique.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web Oblique';
+	font-display: swap;
+	font-weight: 100;
+	font-stretch: expanded;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-ExtendedThinOblique.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 100;
+	font-stretch: condensed;
+	font-style: oblique;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-CondensedThinOblique.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web Oblique';
+	font-display: swap;
+	font-weight: 100;
+	font-stretch: condensed;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-CondensedThinOblique.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 100;
+	font-stretch: ultra-expanded;
+	font-style: oblique;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-UltraExtendedThinOblique.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web Oblique';
+	font-display: swap;
+	font-weight: 100;
+	font-stretch: ultra-expanded;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-UltraExtendedThinOblique.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 100;
+	font-stretch: normal;
+	font-style: italic;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-ThinItalic.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 100;
+	font-stretch: expanded;
+	font-style: italic;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-ExtendedThinItalic.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 100;
+	font-stretch: condensed;
+	font-style: italic;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-CondensedThinItalic.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 100;
+	font-stretch: ultra-expanded;
+	font-style: italic;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-UltraExtendedThinItalic.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 200;
+	font-stretch: normal;
+	font-style: normal;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-ExtraLight.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 200;
+	font-stretch: expanded;
+	font-style: normal;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-ExtendedExtraLight.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 200;
+	font-stretch: condensed;
+	font-style: normal;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-CondensedExtraLight.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 200;
+	font-stretch: ultra-expanded;
+	font-style: normal;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-UltraExtendedExtraLight.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 200;
+	font-stretch: normal;
+	font-style: oblique;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-ExtraLightOblique.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web Oblique';
+	font-display: swap;
+	font-weight: 200;
+	font-stretch: normal;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-ExtraLightOblique.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 200;
+	font-stretch: expanded;
+	font-style: oblique;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-ExtendedExtraLightOblique.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web Oblique';
+	font-display: swap;
+	font-weight: 200;
+	font-stretch: expanded;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-ExtendedExtraLightOblique.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 200;
+	font-stretch: condensed;
+	font-style: oblique;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-CondensedExtraLightOblique.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web Oblique';
+	font-display: swap;
+	font-weight: 200;
+	font-stretch: condensed;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-CondensedExtraLightOblique.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 200;
+	font-stretch: ultra-expanded;
+	font-style: oblique;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-UltraExtendedExtraLightOblique.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web Oblique';
+	font-display: swap;
+	font-weight: 200;
+	font-stretch: ultra-expanded;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-UltraExtendedExtraLightOblique.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 200;
+	font-stretch: normal;
+	font-style: italic;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-ExtraLightItalic.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 200;
+	font-stretch: expanded;
+	font-style: italic;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-ExtendedExtraLightItalic.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 200;
+	font-stretch: condensed;
+	font-style: italic;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-CondensedExtraLightItalic.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 200;
+	font-stretch: ultra-expanded;
+	font-style: italic;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-UltraExtendedExtraLightItalic.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 300;
+	font-stretch: normal;
+	font-style: normal;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-Light.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 300;
+	font-stretch: expanded;
+	font-style: normal;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-ExtendedLight.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 300;
+	font-stretch: condensed;
+	font-style: normal;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-CondensedLight.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 300;
+	font-stretch: ultra-expanded;
+	font-style: normal;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-UltraExtendedLight.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 300;
+	font-stretch: normal;
+	font-style: oblique;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-LightOblique.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web Oblique';
+	font-display: swap;
+	font-weight: 300;
+	font-stretch: normal;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-LightOblique.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 300;
+	font-stretch: expanded;
+	font-style: oblique;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-ExtendedLightOblique.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web Oblique';
+	font-display: swap;
+	font-weight: 300;
+	font-stretch: expanded;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-ExtendedLightOblique.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 300;
+	font-stretch: condensed;
+	font-style: oblique;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-CondensedLightOblique.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web Oblique';
+	font-display: swap;
+	font-weight: 300;
+	font-stretch: condensed;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-CondensedLightOblique.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 300;
+	font-stretch: ultra-expanded;
+	font-style: oblique;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-UltraExtendedLightOblique.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web Oblique';
+	font-display: swap;
+	font-weight: 300;
+	font-stretch: ultra-expanded;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-UltraExtendedLightOblique.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 300;
+	font-stretch: normal;
+	font-style: italic;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-LightItalic.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 300;
+	font-stretch: expanded;
+	font-style: italic;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-ExtendedLightItalic.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 300;
+	font-stretch: condensed;
+	font-style: italic;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-CondensedLightItalic.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 300;
+	font-stretch: ultra-expanded;
+	font-style: italic;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-UltraExtendedLightItalic.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 400;
+	font-stretch: normal;
+	font-style: normal;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-Regular.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 400;
+	font-stretch: expanded;
+	font-style: normal;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-Extended.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 400;
+	font-stretch: condensed;
+	font-style: normal;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-Condensed.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 400;
+	font-stretch: ultra-expanded;
+	font-style: normal;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-UltraExtended.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 400;
+	font-stretch: normal;
+	font-style: oblique;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-Oblique.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web Oblique';
+	font-display: swap;
+	font-weight: 400;
+	font-stretch: normal;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-Oblique.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 400;
+	font-stretch: expanded;
+	font-style: oblique;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-ExtendedOblique.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web Oblique';
+	font-display: swap;
+	font-weight: 400;
+	font-stretch: expanded;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-ExtendedOblique.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 400;
+	font-stretch: condensed;
+	font-style: oblique;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-CondensedOblique.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web Oblique';
+	font-display: swap;
+	font-weight: 400;
+	font-stretch: condensed;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-CondensedOblique.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 400;
+	font-stretch: ultra-expanded;
+	font-style: oblique;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-UltraExtendedOblique.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web Oblique';
+	font-display: swap;
+	font-weight: 400;
+	font-stretch: ultra-expanded;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-UltraExtendedOblique.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 400;
+	font-stretch: normal;
+	font-style: italic;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-Italic.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 400;
+	font-stretch: expanded;
+	font-style: italic;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-ExtendedItalic.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 400;
+	font-stretch: condensed;
+	font-style: italic;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-CondensedItalic.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 400;
+	font-stretch: ultra-expanded;
+	font-style: italic;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-UltraExtendedItalic.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 500;
+	font-stretch: normal;
+	font-style: normal;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-Medium.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 500;
+	font-stretch: expanded;
+	font-style: normal;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-ExtendedMedium.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 500;
+	font-stretch: condensed;
+	font-style: normal;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-CondensedMedium.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 500;
+	font-stretch: ultra-expanded;
+	font-style: normal;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-UltraExtendedMedium.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 500;
+	font-stretch: normal;
+	font-style: oblique;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-MediumOblique.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web Oblique';
+	font-display: swap;
+	font-weight: 500;
+	font-stretch: normal;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-MediumOblique.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 500;
+	font-stretch: expanded;
+	font-style: oblique;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-ExtendedMediumOblique.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web Oblique';
+	font-display: swap;
+	font-weight: 500;
+	font-stretch: expanded;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-ExtendedMediumOblique.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 500;
+	font-stretch: condensed;
+	font-style: oblique;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-CondensedMediumOblique.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web Oblique';
+	font-display: swap;
+	font-weight: 500;
+	font-stretch: condensed;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-CondensedMediumOblique.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 500;
+	font-stretch: ultra-expanded;
+	font-style: oblique;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-UltraExtendedMediumOblique.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web Oblique';
+	font-display: swap;
+	font-weight: 500;
+	font-stretch: ultra-expanded;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-UltraExtendedMediumOblique.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 500;
+	font-stretch: normal;
+	font-style: italic;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-MediumItalic.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 500;
+	font-stretch: expanded;
+	font-style: italic;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-ExtendedMediumItalic.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 500;
+	font-stretch: condensed;
+	font-style: italic;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-CondensedMediumItalic.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 500;
+	font-stretch: ultra-expanded;
+	font-style: italic;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-UltraExtendedMediumItalic.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 600;
+	font-stretch: normal;
+	font-style: normal;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-SemiBold.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 600;
+	font-stretch: expanded;
+	font-style: normal;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-ExtendedSemiBold.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 600;
+	font-stretch: condensed;
+	font-style: normal;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-CondensedSemiBold.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 600;
+	font-stretch: ultra-expanded;
+	font-style: normal;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-UltraExtendedSemiBold.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 600;
+	font-stretch: normal;
+	font-style: oblique;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-SemiBoldOblique.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web Oblique';
+	font-display: swap;
+	font-weight: 600;
+	font-stretch: normal;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-SemiBoldOblique.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 600;
+	font-stretch: expanded;
+	font-style: oblique;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-ExtendedSemiBoldOblique.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web Oblique';
+	font-display: swap;
+	font-weight: 600;
+	font-stretch: expanded;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-ExtendedSemiBoldOblique.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 600;
+	font-stretch: condensed;
+	font-style: oblique;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-CondensedSemiBoldOblique.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web Oblique';
+	font-display: swap;
+	font-weight: 600;
+	font-stretch: condensed;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-CondensedSemiBoldOblique.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 600;
+	font-stretch: ultra-expanded;
+	font-style: oblique;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-UltraExtendedSemiBoldOblique.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web Oblique';
+	font-display: swap;
+	font-weight: 600;
+	font-stretch: ultra-expanded;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-UltraExtendedSemiBoldOblique.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 600;
+	font-stretch: normal;
+	font-style: italic;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-SemiBoldItalic.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 600;
+	font-stretch: expanded;
+	font-style: italic;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-ExtendedSemiBoldItalic.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 600;
+	font-stretch: condensed;
+	font-style: italic;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-CondensedSemiBoldItalic.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 600;
+	font-stretch: ultra-expanded;
+	font-style: italic;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-UltraExtendedSemiBoldItalic.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 700;
+	font-stretch: normal;
+	font-style: normal;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-Bold.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 700;
+	font-stretch: expanded;
+	font-style: normal;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-ExtendedBold.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 700;
+	font-stretch: condensed;
+	font-style: normal;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-CondensedBold.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 700;
+	font-stretch: ultra-expanded;
+	font-style: normal;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-UltraExtendedBold.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 700;
+	font-stretch: normal;
+	font-style: oblique;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-BoldOblique.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web Oblique';
+	font-display: swap;
+	font-weight: 700;
+	font-stretch: normal;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-BoldOblique.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 700;
+	font-stretch: expanded;
+	font-style: oblique;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-ExtendedBoldOblique.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web Oblique';
+	font-display: swap;
+	font-weight: 700;
+	font-stretch: expanded;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-ExtendedBoldOblique.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 700;
+	font-stretch: condensed;
+	font-style: oblique;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-CondensedBoldOblique.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web Oblique';
+	font-display: swap;
+	font-weight: 700;
+	font-stretch: condensed;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-CondensedBoldOblique.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 700;
+	font-stretch: ultra-expanded;
+	font-style: oblique;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-UltraExtendedBoldOblique.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web Oblique';
+	font-display: swap;
+	font-weight: 700;
+	font-stretch: ultra-expanded;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-UltraExtendedBoldOblique.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 700;
+	font-stretch: normal;
+	font-style: italic;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-BoldItalic.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 700;
+	font-stretch: expanded;
+	font-style: italic;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-ExtendedBoldItalic.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 700;
+	font-stretch: condensed;
+	font-style: italic;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-CondensedBoldItalic.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 700;
+	font-stretch: ultra-expanded;
+	font-style: italic;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-UltraExtendedBoldItalic.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 800;
+	font-stretch: normal;
+	font-style: normal;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-ExtraBold.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 800;
+	font-stretch: expanded;
+	font-style: normal;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-ExtendedExtraBold.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 800;
+	font-stretch: condensed;
+	font-style: normal;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-CondensedExtraBold.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 800;
+	font-stretch: ultra-expanded;
+	font-style: normal;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-UltraExtendedExtraBold.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 800;
+	font-stretch: normal;
+	font-style: oblique;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-ExtraBoldOblique.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web Oblique';
+	font-display: swap;
+	font-weight: 800;
+	font-stretch: normal;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-ExtraBoldOblique.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 800;
+	font-stretch: expanded;
+	font-style: oblique;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-ExtendedExtraBoldOblique.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web Oblique';
+	font-display: swap;
+	font-weight: 800;
+	font-stretch: expanded;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-ExtendedExtraBoldOblique.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 800;
+	font-stretch: condensed;
+	font-style: oblique;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-CondensedExtraBoldOblique.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web Oblique';
+	font-display: swap;
+	font-weight: 800;
+	font-stretch: condensed;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-CondensedExtraBoldOblique.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 800;
+	font-stretch: ultra-expanded;
+	font-style: oblique;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-UltraExtendedExtraBoldOblique.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web Oblique';
+	font-display: swap;
+	font-weight: 800;
+	font-stretch: ultra-expanded;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-UltraExtendedExtraBoldOblique.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 800;
+	font-stretch: normal;
+	font-style: italic;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-ExtraBoldItalic.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 800;
+	font-stretch: expanded;
+	font-style: italic;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-ExtendedExtraBoldItalic.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 800;
+	font-stretch: condensed;
+	font-style: italic;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-CondensedExtraBoldItalic.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 800;
+	font-stretch: ultra-expanded;
+	font-style: italic;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-UltraExtendedExtraBoldItalic.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 900;
+	font-stretch: normal;
+	font-style: normal;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-Heavy.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 900;
+	font-stretch: expanded;
+	font-style: normal;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-ExtendedHeavy.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 900;
+	font-stretch: condensed;
+	font-style: normal;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-CondensedHeavy.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 900;
+	font-stretch: ultra-expanded;
+	font-style: normal;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-UltraExtendedHeavy.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 900;
+	font-stretch: normal;
+	font-style: oblique;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-HeavyOblique.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web Oblique';
+	font-display: swap;
+	font-weight: 900;
+	font-stretch: normal;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-HeavyOblique.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 900;
+	font-stretch: expanded;
+	font-style: oblique;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-ExtendedHeavyOblique.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web Oblique';
+	font-display: swap;
+	font-weight: 900;
+	font-stretch: expanded;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-ExtendedHeavyOblique.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 900;
+	font-stretch: condensed;
+	font-style: oblique;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-CondensedHeavyOblique.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web Oblique';
+	font-display: swap;
+	font-weight: 900;
+	font-stretch: condensed;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-CondensedHeavyOblique.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 900;
+	font-stretch: ultra-expanded;
+	font-style: oblique;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-UltraExtendedHeavyOblique.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web Oblique';
+	font-display: swap;
+	font-weight: 900;
+	font-stretch: ultra-expanded;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-UltraExtendedHeavyOblique.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 900;
+	font-stretch: normal;
+	font-style: italic;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-HeavyItalic.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 900;
+	font-stretch: expanded;
+	font-style: italic;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-ExtendedHeavyItalic.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 900;
+	font-stretch: condensed;
+	font-style: italic;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-CondensedHeavyItalic.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 900;
+	font-stretch: ultra-expanded;
+	font-style: italic;
+	src: url('./WOFF2/IosevkaNicbuddSansV1-UltraExtendedHeavyItalic.woff2') format('woff2')
+}

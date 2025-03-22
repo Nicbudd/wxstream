@@ -1,4 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('./IosevkaNicbuddSansV1/IosevkaNicbuddSansV1.css');
+@import url('./IosevkaNicbuddSlabV1/IosevkaNicbuddSlabV1.css');
+
+:root{
+	--white: #E6E6E6;
+	--lightGray: #C3C3C3;
+	--darkGray: #949494;
+	--black: #303030;
+	--red: #C14747;
+	--green: #3BA769;
+	--blue: #316FA6;
+}
 
 * {
     box-sizing: border-box;
@@ -18,7 +30,7 @@
 
 .feed {
     margin: 0;
-    padding: 4px;
+    padding: 8px;
     background: #303030;
     display: block;
     width: 100%;
@@ -35,16 +47,30 @@ body {
     padding: 0;
     margin: 0;
     background: #949494;
-    font: normal 0.9em Inconsolata; 
+    font-weight: normal;
+    font-size: 0.85em;
+
+    /* font-stretch: expanded; */
+    /* font-family: "Iosevka Nicbudd Slab v1 Web", "Iosevka Nicbudd Sans v1 Web", Inconsolata, Monospace;  */
+    
+    font-stretch: normal;
+    font-family: "Iosevka Nicbudd Sans v1 Web", Inconsolata, Monospace; 
+
     color: #e6e6e6;
 }
+
+
 
 .message {
     width: 100%;
     display: block;
 }
 
-#blinker {
+.message.error {
+    color: var(--red)
+}
+
+.blinker {
     transition: background 2s;
     background-color: #949494;
     position: fixed;
@@ -57,8 +83,8 @@ body {
     z-index: 3;
 }
 
-#poll {
-    transition: background 2s;
+.poll {
+    transition: background 5s;
     background-color: #949494;
     position: fixed;
     display: block;
