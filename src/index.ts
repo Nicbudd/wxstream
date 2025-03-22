@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import { Poller } from "./polling";
 // import "./xmpp.ts"
-import { Feed, prebuiltFeeds } from "./feeds";
+import { Feed, ThemeClass } from "./feeds";
 import "./style.css";
 
 var feeds: Array<Feed> = [];
@@ -12,7 +12,35 @@ $(function() {
     // refreshAll(feeds);
     // setInterval(refreshAll, PollingInterval, feeds);
     new Feed(prebuiltFeeds["default"], feeds, pollers, PollingInterval);
+    new Feed(prebuiltFeeds["box"], feeds, pollers, PollingInterval);
 })
 
 
+const standard_blacklist = [/PIREP/, /Climate Report:/, /Routine pilot report/, 
+    /Terminal Aerodrome Forecast/, /SIGMET/, /Zone Forecast Package/, 
+    /Area Forecast Discussion/, /^METAR/]
 
+const standard_colorizing: Array<[RegExp, Array<ThemeClass>]> = [
+    // (/\[[^\]]*(GYX|BOX|BOS|BTV|NH|ME|VT|MA|MASS|CT|RI|Manchester,? NH)[^\[]*\]/, ["whitebg", "black"])
+]
+
+const prebuiltFeeds = {
+    default: {
+        channels: ["botstalk"],
+        whitelist: [],
+        blacklist: standard_blacklist,
+        themes: standard_colorizing
+    },
+    box: {
+        channels: ["boxchat"],
+        whitelist: [],
+        blacklist: standard_blacklist,
+        themes: standard_colorizing
+    },
+    all: {
+        channels: ["botstalk"],
+        whitelist: [],
+        blacklist: [],
+        themes: standard_colorizing
+    }
+}

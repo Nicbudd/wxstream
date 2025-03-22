@@ -12,9 +12,10 @@ export class Poller {
     seqnum: number
 
     constructor(channel: string, poll_freq: number) {
-        this.channel = channel
-        this.feeds = []
-        this.seqnum = 0
+        this.channel = channel;
+        this.feeds = [];
+        this.seqnum = 0;
+        pollChannel(this);
         setInterval(pollChannel, poll_freq, this)
     }
 
@@ -24,7 +25,7 @@ export class Poller {
 }
 
 function pollChannel(poller: Poller) {
-    console.log(poller)
+    console.log(`Pinging channel ${poller.channel}`)
 
     if (poller.feeds.length <= 0) {
         return
@@ -39,13 +40,13 @@ function pollChannel(poller: Poller) {
 
             if (channel_messages.length > 0) {
                 poller.seqnum = channel_messages.at(-1)["seqnum"]
+                console.log("New messages:", channel_messages, poller.seqnum)
+                            
+                for (const f of poller.feeds) {
+                    addNewRawMessages(f, channel_messages)
+                }
             }
-            
-            console.log("New messages:", channel_messages, poller.seqnum)
 
-            for (const f of poller.feeds) {
-                addNewRawMessages(f, channel_messages)
-            }
         }
     }).fail(function() {
         for (const f of poller.feeds) {
@@ -55,36 +56,3 @@ function pollChannel(poller: Poller) {
 }
 
 const proxy_url="https://cloudflare-cors-anywhere.niczippy775894.workers.dev/"
-
-// function pollChannel(feed: Feed) {
-//     const channel = feed.config.channel;
-//     const channel_messages = new_messages.get(channel);
-
-//     if (channel_messages === undefined) {
-//         var req = $.ajax({
-//             dataType : "json",
-//             url: `${proxy_url}?https://weather.im/iembot-json/room/${channel}?seqnum=${prev_seqnum}`,
-//             // upon success do this
-//             success: function(data) {
-//                 const channel_messages = data["messages"]
-//                 new_messages.set(channel, channel_messages)
-
-//                 var seqnum;
-//                 if (channel_messages.length > 0) {
-//                     seqnum = channel_messages.at(-1)["seqnum"]
-//                 } else {
-//                     seqnum = new_messages
-//                 }
-                
-//                 console.log("New messages:", new_messages, new_seqnum)
-
-//                 addNewRawMessages(feed, channel_messages)
-//             }
-//         }).fail(function() {
-//             feed.addErrorMessage(`Failed to access data from channel [${channel}].`) 
-//         })
-
-//     } else {
-//         addNewRawMessages(feed, channel_messages)
-//     }
-// }

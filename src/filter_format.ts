@@ -24,12 +24,12 @@ function addNewRawMessage(feed: Feed, message: any) {
         }
     }
 
-    // blacklist
-    for (const re of feed.config.blacklist) {
-        if (re.test(txt)) {
-            return
-        }
-    }
+    // // themes
+    // for (const th of feed.config.themes) {
+    //     const classList = th[1].join(", ");
+    //     // var sdfff: String = String(txt)
+    //     txt = th[0].replaceAll(txt, `<span class="${classList}">$0</span>`)
+    // }
 
     // console.log(txt)
 

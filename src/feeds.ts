@@ -19,7 +19,7 @@ export class Feed {
                 poller = new Poller(ch, poll_freq);
                 pollers.set(ch, poller)
             } 
-            
+
             poller.addFeed(this)
         }
 
@@ -31,6 +31,8 @@ export class Feed {
         element.classList.add("message")
         element.innerHTML = message
         this.element.prepend(element);
+        // console.log(this.element.innerHTML)
+        // this.element.innerHTML = this.element.innerHTML + "<br>" + message;
     }
 
     addErrorMessage(message: string) {
@@ -55,18 +57,7 @@ interface FeedConfiguration {
     themes: Array<[RegExp, Array<ThemeClass>]>;
 }
 
-type ThemeClass = "red" | "green" | "blue" | "purple" | "orange" | "black" | "white" |
+export type ThemeClass = "red" | "green" | "blue" | "purple" | "orange" | "black" | "white" |
 "redbg" | "greenbg" | "bluebg" | "purplebg" | "orangebg" | "blackbg" | "whitebg";
 
 // light configuration
-
-export const prebuiltFeeds = {
-    default: {
-        channels: ["botstalk"],
-        whitelist: [],
-        blacklist: [],
-        themes: []
-    }
-}
-
-
