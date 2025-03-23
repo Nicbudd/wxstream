@@ -1,16 +1,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="./style.css"> -->
-    <!-- <link rel="stylesheet" href="./textThemes.css"> -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/bold/style.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"/>
 </head>
 <body>
     <div id="idlescreen" class="none">
         <div class="title">Are you still there?</div>
         <div class="content">The page is suspended every 30 minutes to save bandwidth. Do anything to remove this message.</div>
     </div>
+    <div id="info" class="none">
+        <div class="infobox">
+            <h1>wxstream</h1>
+            <p>wxstream is a tool made by nicbudd to monitor iembot messages in a minimalistic, highly configurable frontend. It's a personal project by nicbudd intended to replace <a href="https://weather.im/">weather.im</a> for monitoring weather events, particularly while storm chasing.</p>
+            <p>Currently the website is configured with 3 feeds. From left to right (top to bottom on mobile):</p>
+                <ul>
+                <li><b>Default:</b> reflects the "botstalk" channel with several types of messages filtered out (including METAR, TAF, ZFP, AFD, PIREP)</li>
+                <li><b>Severe:</b> whitelists the default feed with only talk about severe weather and tornadoes.</li>
+                <li><b>Tornado:</b> whitelists the default feed with only talk about tornadoes.</li>
+                </ul>
+            <p>This is still actively being developed, expect changes and new features, including the ability to add, remove, and modify feeds.</p>
+            <p>CLICK ANYWHERE TO HIDE.</p>
+        </div>
+    </div>
     <!-- <div id="blinker"></div>
     <div id="poll"></div> -->
+    <div id="mainmenu">
+        <div class="left">
+            
+        </div>
+        <div class="center">
+            <div class="title">wxstream</div>
+        </div>
+        <div class="right">
+            <button id="infobutton"><i class="ph ph-question"></i></button>
+        </div>
+    </div>
+
     <div id="feedgrid">
         <!-- <div class="feed">other feed!</div> -->
     </div>

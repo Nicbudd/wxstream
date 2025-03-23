@@ -38,5 +38,16 @@ $(function() {
             }
         }
     })
+
+    $("#infobutton").on("click", () => {
+        $("#info").toggleClass("none")
+    })
+
+    $("#info").on("click", () => {
+        $("#info").toggleClass("none")
+    })
+
     idleTracker.start();
+
 })
+

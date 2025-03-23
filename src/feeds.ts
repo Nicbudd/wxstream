@@ -46,8 +46,8 @@ export class Feed {
 export function addToFeedGrid(element: HTMLDivElement) {
     var g = $("#feedgrid")
     g.append(element)
-    var len = g.children().length
-    g.css("grid-template-columns", `repeat(${len}, minmax(0, 1fr))`)
+    // var len = g.children().length
+    // g.css("grid-template-columns", `repeat(${len}, minmax(0, 1fr))`)
 }
 
 interface FeedConfiguration {

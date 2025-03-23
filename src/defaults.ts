@@ -65,7 +65,7 @@ const standard_themes: Array<[RegExp, Array<ThemeClass>]> = [
 ]
 
 const tornado_whitelist = [/tornado/gi, /mesoscale discussion/gi]
-const severe_whitelist = [/thunderstorm/gi, /tstm/gi].concat(tornado_whitelist)
+const severe_whitelist = [/thunderstorm/gi, /(?<!non\-)tstm/gi].concat(tornado_whitelist)
 
 export const prebuiltFeeds = {
     default: {
