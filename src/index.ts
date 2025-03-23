@@ -11,12 +11,10 @@ var pollers: Map<string, Poller> = new Map();
 const PollingInterval = 5*1000;
 
 $(function() {
-    new Feed(prebuiltFeeds["all"], feeds, pollers, PollingInterval);
+    // new Feed(prebuiltFeeds["all"], feeds, pollers, PollingInterval);
     new Feed(prebuiltFeeds["default"], feeds, pollers, PollingInterval);
-    new Feed(prebuiltFeeds["gyx"], feeds, pollers, PollingInterval);
-    new Feed(prebuiltFeeds["test"], feeds, pollers, PollingInterval);
-
-
+    new Feed(prebuiltFeeds["severe"], feeds, pollers, PollingInterval);
+    new Feed(prebuiltFeeds["tornado"], feeds, pollers, PollingInterval);
     
     const idleTracker = new IdleTracker({
         timeout: 1000 * 60 * 30, // 30 minutes

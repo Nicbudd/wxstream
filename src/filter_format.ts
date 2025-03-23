@@ -16,18 +16,28 @@ function addNewRawMessage(feed: Feed, message: any) {
     var txt: string = message["message"];
     txt = strip(txt)
 
+    
+    var include = true;
+    if (feed.config.whitelist.length > 0) {
+        include = false;
+    }
+
     // whitelist
     for (const re of feed.config.whitelist) {
-        if (!re.test(txt)) {
-            return
+        if (re.test(txt)) {
+            include = true
         }
     }
 
     // blacklist
     for (const re of feed.config.blacklist) {
         if (re.test(txt)) {
-            return
+            include = false
         }
+    }
+
+    if (!include) {
+        return
     }
 
     // themes

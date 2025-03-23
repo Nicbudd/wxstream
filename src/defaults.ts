@@ -2,7 +2,7 @@ import { ThemeClass } from "./feeds"
 
 const standard_blacklist = [/PIREP/, /Climate Report:/, /Routine pilot report/, 
     /Terminal Aerodrome Forecast/, /SIGMET/, /Zone Forecast Package \(ZFP\)/, 
-    /Area Forecast Discussion/, /^METAR/, /^METAR/, /Recreational Forecast \(REC\)/,
+    /Area Forecast Discussion/, /^METAR/, /^SPECI/, /Recreational Forecast \(REC\)/,
     /Fire Weather Planning Forecast \(FWF\)/]
 
 const standard_themes: Array<[RegExp, Array<ThemeClass>]> = [
@@ -13,7 +13,7 @@ const standard_themes: Array<[RegExp, Array<ThemeClass>]> = [
     // Tornado emergency
     [/(?<!(expires|cancels) )(tornado emergency)/gi, ["emergency"]],
     // PDS (not sure if this will work)
-    [/( pds |particularly dangerous situation)/gi, ["emergency"]],
+    [/(pds|particularly dangerous situation)/gi, ["emergency"]],
     // Tornado watch
     [/(?<!(expires|cancels) )(tornado watch)/gi, ["bold"]],
     // Severe thunderstorm warnings with tornado possible
@@ -55,7 +55,7 @@ const standard_themes: Array<[RegExp, Array<ThemeClass>]> = [
     [/(sust |sustained |peak )?(gust|wind|winds)?\:? ?(of )?M?(\d{2}G)?\d+\.?\d*\s?(mph|kts|kt|knots|knot)/gi, ["green"]], 
 
     // reports
-    [/(\] )(.* reports ((tstm|wnd|gst|non-tstm|gust|snow|hail) )*)/gi, ["purple"]],
+    [/(?<=\] )(.* reports ((tstm|wnd|gst|non-tstm|gust|snow|hail) )*)/gi, ["purple"]],
 
     // space weather
     [/(aurora(?!,? co))|geomagnetic|(space weather prediction center)|(swpc)/gi, ["purple"]],
@@ -63,6 +63,9 @@ const standard_themes: Array<[RegExp, Array<ThemeClass>]> = [
     // k-index
     [/(k-index (of )?\d)/gi, ["purplebg", "black"]]
 ]
+
+const tornado_whitelist = [/tornado/, /mesoscale discussion/]
+const severe_whitelist = [/thunderstorm/, /tstm/].concat(tornado_whitelist)
 
 export const prebuiltFeeds = {
     default: {
@@ -87,6 +90,18 @@ export const prebuiltFeeds = {
         channels: ["test"],
         whitelist: [],
         blacklist: standard_blacklist,
+        themes: standard_themes
+    },
+    severe: {
+        channels: ["botstalk"],
+        whitelist: severe_whitelist,
+        blacklist: [],
+        themes: standard_themes
+    },
+    tornado: {
+        channels: ["botstalk"],
+        whitelist: tornado_whitelist,
+        blacklist: [],
         themes: standard_themes
     },
     all: {
