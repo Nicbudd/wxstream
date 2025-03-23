@@ -1,0 +1,395 @@
+/*!*****************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/style.css ***!
+  \*****************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap);
+/*!*****************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/IosevkaNicbuddSansV1/IosevkaNicbuddSansV1.css ***!
+  \*****************************************************************************************************/
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 400;
+	font-stretch: normal;
+	font-style: normal;
+	src: url(fonts/IosevkaNicbuddSansV1-Regular.woff2) format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 400;
+	font-stretch: expanded;
+	font-style: normal;
+	src: url(fonts/IosevkaNicbuddSansV1-Extended.woff2) format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 400;
+	font-stretch: condensed;
+	font-style: normal;
+	src: url(fonts/IosevkaNicbuddSansV1-Condensed.woff2) format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 700;
+	font-stretch: normal;
+	font-style: normal;
+	src: url(fonts/IosevkaNicbuddSansV1-Bold.woff2) format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 700;
+	font-stretch: expanded;
+	font-style: normal;
+	src: url(fonts/IosevkaNicbuddSansV1-ExtendedBold.woff2) format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 700;
+	font-stretch: condensed;
+	font-style: normal;
+	src: url(fonts/IosevkaNicbuddSansV1-CondensedBold.woff2) format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 900;
+	font-stretch: normal;
+	font-style: normal;
+	src: url(fonts/IosevkaNicbuddSansV1-Heavy.woff2) format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 900;
+	font-stretch: expanded;
+	font-style: normal;
+	src: url(fonts/IosevkaNicbuddSansV1-ExtendedHeavy.woff2) format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 900;
+	font-stretch: condensed;
+	font-style: normal;
+	src: url(fonts/IosevkaNicbuddSansV1-CondensedHeavy.woff2) format('woff2')
+}
+/*!*****************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/IosevkaNicbuddSlabV1/IosevkaNicbuddSlabV1.css ***!
+  \*****************************************************************************************************/
+@font-face {
+	font-family: 'Iosevka Nicbudd Slab v1 Web';
+	font-display: swap;
+	font-weight: 400;
+	font-stretch: normal;
+	font-style: normal;
+	src: url(fonts/IosevkaNicbuddSlabV1-Regular.woff2) format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Slab v1 Web';
+	font-display: swap;
+	font-weight: 400;
+	font-stretch: expanded;
+	font-style: normal;
+	src: url(fonts/IosevkaNicbuddSlabV1-Extended.woff2) format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Slab v1 Web';
+	font-display: swap;
+	font-weight: 400;
+	font-stretch: condensed;
+	font-style: normal;
+	src: url(fonts/IosevkaNicbuddSlabV1-Condensed.woff2) format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Slab v1 Web';
+	font-display: swap;
+	font-weight: 700;
+	font-stretch: normal;
+	font-style: normal;
+	src: url(fonts/IosevkaNicbuddSlabV1-Bold.woff2) format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Slab v1 Web';
+	font-display: swap;
+	font-weight: 700;
+	font-stretch: expanded;
+	font-style: normal;
+	src: url(fonts/IosevkaNicbuddSlabV1-ExtendedBold.woff2) format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Slab v1 Web';
+	font-display: swap;
+	font-weight: 700;
+	font-stretch: condensed;
+	font-style: normal;
+	src: url(fonts/IosevkaNicbuddSlabV1-CondensedBold.woff2) format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Slab v1 Web';
+	font-display: swap;
+	font-weight: 900;
+	font-stretch: normal;
+	font-style: normal;
+	src: url(fonts/IosevkaNicbuddSlabV1-Heavy.woff2) format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Slab v1 Web';
+	font-display: swap;
+	font-weight: 900;
+	font-stretch: expanded;
+	font-style: normal;
+	src: url(fonts/IosevkaNicbuddSlabV1-ExtendedHeavy.woff2) format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Slab v1 Web';
+	font-display: swap;
+	font-weight: 900;
+	font-stretch: condensed;
+	font-style: normal;
+	src: url(fonts/IosevkaNicbuddSlabV1-CondensedHeavy.woff2) format('woff2')
+}
+/*!**********************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/textThemes.css ***!
+  \**********************************************************************/
+.purple {
+    color: #7c56b5 !important;
+}
+.purplebg {
+    background: #7c56b5 !important;
+}
+
+.blue {
+    color: #316fa6 !important;
+}
+.bluebg {
+    background: #316fa6 !important;
+}
+
+.green {
+    color: #3ba769 !important;
+}
+.greenbg {
+    background: #3ba769 !important;
+}
+
+.red {
+    color: #c14747 !important;
+}
+.redbg {
+    background: #c14747 !important;
+}
+
+.orange {
+    color: #bf8060 !important;
+}
+.orangebg {
+    background: #bf8060 !important;
+}
+
+.white {
+    color: #e6e6e6 !important;
+}
+.whitebg {
+    background: #e6e6e6 !important;
+}
+
+.black {
+    color: #303030 !important;
+}
+.blackbg {
+    background: #303030 !important;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.extra-bold {
+    font-weight: 900;
+}
+
+.emergency {
+    font-weight: 900;
+    animation: emergency 3s infinite;
+}
+
+@keyframes emergency {
+    0%, 100% {
+        color: var(--black);
+        background-color: var(--red);
+    }
+    50% {
+        color: var(--red);
+        background-color: var(--white);
+    }
+}
+/*!*********************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/style.css (1) ***!
+  \*********************************************************************/
+:root{
+	--white: #E6E6E6;
+	--lightGray: #C3C3C3;
+	--darkGray: #949494;
+	--black: #303030;
+	--red: #C14747;
+	--green: #3BA769;
+	--blue: #316FA6;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#feedgrid {
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: repeat(2, 50%);
+    padding: 0;
+    margin: 0;
+    row-gap: 4px;
+    column-gap: 4px;
+    width: calc(100% - 4px);
+    height: 100%;
+}
+
+.feed {
+    margin: 0;
+    padding: 8px;
+    background: #303030;
+    display: block;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    /* flex-wrap: wrap; */
+    align-items: flex-end;
+    overflow-y: scroll;
+    /* grid-template-columns: 100%; */
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background: #949494;
+    font-weight: normal;
+    font-size: 0.85em;
+
+    /* font-stretch: expanded; */
+    /* font-family: "Iosevka Nicbudd Slab v1 Web", "Iosevka Nicbudd Sans v1 Web", Inconsolata, Monospace;  */
+    
+    font-stretch: normal;
+    font-family: "Iosevka Nicbudd Sans v1 Web", Inconsolata, Monospace; 
+
+    color: #e6e6e6;
+}
+
+
+
+.message {
+    width: 100%;
+    display: block;
+    color: var(--white);
+    text-decoration: none;
+    padding: 2px 0;
+}
+
+.message.error {
+    color: var(--red)
+}
+
+.message:hover {
+    font-weight: 800;
+}
+
+.blinker {
+    transition: background 2s;
+    background-color: #949494;
+    position: fixed;
+    display: block;
+    left: 24px;
+    top: 24px;
+    width: 16px;
+    height: 16px;
+    border-radius: 200px;
+    z-index: 3;
+}
+
+.poll {
+    transition: background 5s;
+    background-color: #949494;
+    position: fixed;
+    display: block;
+    left: 24px;
+    top: 24px;
+    width: 16px;
+    height: 16px;
+    border-radius: 200px;
+    z-index: 2;
+}
+
+
+@keyframes blink {
+    0%   {background-color: #3ba769;}
+    100% {background-color: #3ba769; opacity: 0; width: 48px; height: 48px; transform: translate(-16px, -16px);}
+}
+
+.blinkAnimation {
+    transition: background 0s;
+    animation: blink 2s ease-out;
+}
+
+.responseWait {
+    background: #c14747 !important;
+}
+
+#idlescreen {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(16px);
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#idlescreen .title {
+    font-weight: 900;
+    font-size: 32px;
+    padding: 0 1em;
+}
+
+#idlescreen .content {
+    font-size: 16px;
+    padding: 0 1em;
+}
+
+.none {
+    display: none !important;
+}
+
+.time {
+    font-weight: 700;
+    text-decoration: underline;
+}
