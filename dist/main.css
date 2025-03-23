@@ -255,22 +255,84 @@
 	--red: #C14747;
 	--green: #3BA769;
 	--blue: #316FA6;
+    --menuheight: 30px;
+    --menugap: 4px;
 }
 
 * {
     box-sizing: border-box;
 }
 
+#mainmenu {
+    height: var(--menuheight);
+    position: fixed;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    /* justify-content: center; */
+    /* align-items: center; */
+    background-color: var(--black);
+}
+
+#mainmenu button {
+    margin: 0 8px;
+    /* padding: 4px; */
+    /* padding: 0 -2px; */
+    border: none;
+    width: var(--menuheight);
+    height: var(--menuheight);
+    background-color: var(--black);
+    color: var(--white);
+    border-radius: 8px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.2s, background 0.2s;
+}
+
+/* #mainmenu button:hover {
+    background-color: var(--white);
+    color: var(--black);
+} */
+
+#mainmenu .left {
+    margin-right: auto;
+}
+
+#mainmenu .center {
+    margin: 0 auto;
+}
+
+#mainmenu .right {
+    margin-left: auto;
+}
+
+#mainmenu .title {
+    font-weight: 700;
+    font-size: 22px;
+}
+
 #feedgrid {
     display: grid;
     grid-template-rows: 100%;
-    grid-template-columns: repeat(2, 50%);
+    grid-template-columns: repeat(3, 33.33333%);
     padding: 0;
     margin: 0;
     row-gap: 4px;
     column-gap: 4px;
-    width: calc(100% - 4px);
+    width: 100%;
     height: 100%;
+    /* height: calc(100% - 20px); */
+    position: fixed;
+    bottom: 0px;
+    min-height: calc(100% - var(--menuheight) - var(--menugap));
+    max-height: calc(100% - var(--menuheight) - var(--menugap));
+}
+
+@media screen and (max-width: 1200px) {
+    #feedgrid {
+        grid-template-rows: repeat(3, 33.33333%);
+        grid-template-columns: 100%;
+    }
 }
 
 .feed {
@@ -284,7 +346,8 @@
     flex-direction: column-reverse;
     /* flex-wrap: wrap; */
     align-items: flex-end;
-    overflow-y: scroll;
+    overflow-y: auto;
+    scrollbar-width: none;
     /* grid-template-columns: 100%; */
 }
 
@@ -392,4 +455,39 @@ body {
 .time {
     font-weight: 700;
     text-decoration: underline;
+}
+
+#info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    backdrop-filter: brightness(40%) blur(2px);
+    z-index: 3;
+}
+
+#info .infobox  {
+    display: inline-block;
+    max-width: 50%;
+    padding: 0px 32px;
+    background-color: var(--black);
+    text-align: center;
+    font-size: 1.2em;
+}
+
+#info .infobox li {
+    text-align: left;
+}
+
+@media screen and (max-width: 800px) {
+    #info .infobox {
+        max-width: 80%;
+        font-size: 1em;
+    }
+}
+
+#info .infobox a {
+    color: var(--blue)
 }
