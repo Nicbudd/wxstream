@@ -3,12 +3,14 @@ import { ThemeClass } from "./feeds"
 const standard_blacklist = [/PIREP/, /Climate Report:/, /Routine pilot report/, 
     /Terminal Aerodrome Forecast/, /SIGMET/, /Zone Forecast Package \(ZFP\)/, 
     /Area Forecast Discussion/, /^METAR/, /^SPECI/, /Recreational Forecast \(REC\)/,
-    /Fire Weather Planning Forecast \(FWF\)/]
+    /Fire Weather Planning Forecast \(FWF\)/, /center issues .+ for portions of [a-z]{3}'s area/i]
 
 const standard_themes: Array<[RegExp, Array<ThemeClass>]> = [
     // New England Locale
-    [/\[[^\]]*(GYX|BOX|BOS|BTV|NH|ME|VT|MA|MASS|CT|RI|Manchester,? NH)[^\[]*\]/gi, ["whitebg", "black"]],
-    [/(?<=[^\w\[])(GYX|BOX|BOS|BTV|NH|ME|VT|MA|MASS|CT|RI|Manchester,? NH)(?=[^\w\]])/gi, ["bold"]],
+    [/\[[^\]]*(NH|ME|VT|MA|MASS|CT|RI)\]/gi, ["whitebg", "black"]],
+    [/(?<!\w)(NH|ME|VT|MA|MASS|CT|RI)(?!\w)/gi, ["bold"]],
+    // local WFOs
+    [/(?<!\w)(GYX|BOX|BOS|BTV)(?!\w)/gi, ["bold"]],
     
     // Tornado emergency
     [/(?<!(expires|cancels) )(tornado emergency)/gi, ["emergency"]],
@@ -17,16 +19,18 @@ const standard_themes: Array<[RegExp, Array<ThemeClass>]> = [
     // Tornado watch
     [/(?<!(expires|cancels) )(tornado watch)/gi, ["bold"]],
     // Severe thunderstorm warnings with tornado possible
-    [/(?<!(expires|cancels) )(tornado: possible)/gi, ["bold"]],
+    [/(?<!(expires|cancels) )(tornado: possible)/gi, ["red", "bold"]],
     // confirmed tornado on the ground
-    [/(tornado: radar indicated|tornado: observed)/gi, ["redbg", "black"]],
-    // new tornado warning or tornado possible
-    [/(?<!(expires|cancels) )(tornado warning|tornado(?!(: radar indicated|: observed| watch|: possible| emergency)))/gi, ["red"]],
+    [/(tornado: radar indicated|tornado: observed|confirmed tornado)/gi, ["redbg", "black", "bold"]],
+    // tornado warning
+    [/(?<!(expires|cancels) )(tornado warning)/gi, ["redbg", "black"]],
+    // other mentions of tornado
+    [/(?<!confirmed )tornado(?!( warning| : radar indicated|: observed| watch|: possible| emergency))/gi, ["red"]],
     
-    // severe thunderstorm watch
-    [/(?<!(expires|cancels) )(severe thunderstorm watch|severe thunderstorm(?! watch))/gi, ["orange"]],
-    // severe thunderstorm (warning)
+    // severe thunderstorm warning
     [/(?<!(expires|cancels) )severe thunderstorm warning/gi, ["orangebg", "black"]],
+    // severe thunderstorm watch
+    [/(?<!(expires|cancels) )(severe thunderstorm watch|severe thunderstorm(?!( watch| warning)))/gi, ["orange"]],
     // mesoscale discussions
     [/mesoscale discussion \#\d+/gi, ["greenbg"]],
 
