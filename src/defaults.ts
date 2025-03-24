@@ -25,7 +25,7 @@ const standard_themes: Array<[RegExp, Array<ThemeClass>]> = [
     // tornado warning
     [/(?<!(expires|cancels) )(tornado warning)/gi, ["redbg", "black"]],
     // other mentions of tornado
-    [/(?<!confirmed )tornado(?!( warning| : radar indicated|: observed| watch|: possible| emergency))/gi, ["red"]],
+    [/(?<!confirmed )tornado(?!( warning|: radar indicated|: observed| watch|: possible| emergency))/gi, ["red"]],
     
     // severe thunderstorm warning
     [/(?<!(expires|cancels) )severe thunderstorm warning/gi, ["orangebg", "black"]],
@@ -44,7 +44,7 @@ const standard_themes: Array<[RegExp, Array<ThemeClass>]> = [
     // flood warning
     [/(?<=issues )(flood warning)/gi, ["greenbg"]], 
     // flood warning
-    [/flood(ing)? (?!(warning|cancels))/gmi, ["blue"]], 
+    [/flood(ing)? (?!(warning|cancels))/gi, ["blue"]], 
 
     // hail side
     [/hail:?\s*(of\s*)?[><+-]?\d+\.?\d*\s?(inches|inch|in)(hail)?/gi, ["blue"]],
