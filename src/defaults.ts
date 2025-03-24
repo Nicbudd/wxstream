@@ -18,10 +18,10 @@ const standard_themes: Array<[RegExp, Array<ThemeClass>]> = [
     [/(?<!(expires|cancels) )(tornado watch)/gi, ["bold"]],
     // Severe thunderstorm warnings with tornado possible
     [/(?<!(expires|cancels) )(tornado: possible)/gi, ["bold"]],
-    // new tornado warning or tornado possible
-    [/(?<!(expires|cancels) )(tornado warning|tornado(?!( watch|: possible| emergency)))/gi, ["red"]],
     // confirmed tornado on the ground
     [/(tornado: radar indicated|tornado: observed)/gi, ["redbg", "black"]],
+    // new tornado warning or tornado possible
+    [/(?<!(expires|cancels) )(tornado warning|tornado(?!(: radar indicated|: observed| watch|: possible| emergency)))/gi, ["red"]],
     
     // severe thunderstorm watch
     [/(?<!(expires|cancels) )(severe thunderstorm watch|severe thunderstorm(?! watch))/gi, ["orange"]],
