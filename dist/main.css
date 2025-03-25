@@ -281,8 +281,9 @@
     height: var(--menuheight);
     position: fixed;
     width: 100%;
-    display: flex;
-    flex-wrap: nowrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* flex-wrap: nowrap; */
     /* justify-content: center; */
     /* align-items: center; */
     background-color: var(--black);
@@ -309,15 +310,17 @@
 } */
 
 #mainmenu .left {
-    margin-right: auto;
+    justify-content:left;
 }
 
 #mainmenu .center {
-    margin: 0 auto;
+    display: flex;
+    justify-content:center;
 }
 
 #mainmenu .right {
-    margin-left: auto;
+    display: flex;
+    justify-content:right;
 }
 
 #mainmenu .title {
