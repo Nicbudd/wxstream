@@ -40,14 +40,22 @@ const standard_themes: Array<[RegExp, Array<ThemeClass>]> = [
     [/(?<!(expires|cancels) )(winter storm warning|winter storm(?! watch)|winter weather advisory|winter weather(?! watch))/gi, ["bluebg"]],
 
     // flash flood warning
-    [/(?<!(expires|cancels) )(flash flood warning)/gi, ["greenbg"]], 
+    [/(?<!(expires|cancels) )(flash flood warning)/gi, ["greenbg", "bold"]], 
     // flood warning
-    [/(?<=issues )(flood warning)/gi, ["greenbg"]], 
+    [/(?<!(expires|cancels|flash) )(flood warning)/gi, ["greenbg", "black"]], 
     // flood warning
     [/flood(ing)? (?!(warning|cancels))/gi, ["blue"]], 
 
-    // hail side
+    // fire
+    [/(wildfire|fire)/gi, ["red"]],
+    [/red flag warning/gi, ["red"]],
+    // [/fire/gi, ["redbg", "black"]],
+
+    // hail size
     [/hail:?\s*(of\s*)?[><+-]?\d+\.?\d*\s?(inches|inch|in)(hail)?/gi, ["blue"]],
+
+    // fog
+    [/(dense fog advisory|dense fog|fog)/gi, ["graybg", "black"]],
 
     // snowfall amounts
     [/(heavy\s*)?snow:?\s*(of\s*)?[><+-]?\d+\.?\d*\s?(inches|inch|in|)(of)?(snow)?/gi, ["bluebg"]],
@@ -68,8 +76,11 @@ const standard_themes: Array<[RegExp, Array<ThemeClass>]> = [
     [/(k-index (of )?\d)/gi, ["purplebg", "black"]]
 ]
 
-const tornado_whitelist = [/tornado/gi, /mesoscale discussion/gi]
+const tornado_whitelist = [/(tornado|mesoscale discussion)/gi]
 const severe_whitelist = [/thunderstorm/gi, /(?<!non\-)tstm/gi].concat(tornado_whitelist)
+const fire_whitelist = [/(fire|red flag)/gi]
+const winter_whitelist = [/(winter|snow|sleet|graupel|wintry|freeze|freezing)/gi]
+const metar_whitelist = [/(?<!\w)(metar|speci)(?!\w)/gi]
 
 export const prebuiltFeeds = {
     default: {
@@ -99,18 +110,36 @@ export const prebuiltFeeds = {
     severe: {
         channels: ["botstalk"],
         whitelist: severe_whitelist,
-        blacklist: [],
+        blacklist: standard_blacklist,
         themes: standard_themes
     },
     tornado: {
         channels: ["botstalk"],
         whitelist: tornado_whitelist,
-        blacklist: [],
+        blacklist: standard_blacklist,
+        themes: standard_themes
+    },
+    winter: {
+        channels: ["botstalk"],
+        whitelist: winter_whitelist,
+        blacklist: standard_blacklist,
+        themes: standard_themes
+    },
+    fire: {
+        channels: ["botstalk"],
+        whitelist: fire_whitelist,
+        blacklist: standard_blacklist,
         themes: standard_themes
     },
     all: {
         channels: ["botstalk"],
         whitelist: [],
+        blacklist: [],
+        themes: standard_themes
+    },
+    metar: {
+        channels: ["botstalk"],
+        whitelist: metar_whitelist,
         blacklist: [],
         themes: standard_themes
     }

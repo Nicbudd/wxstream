@@ -124,6 +124,9 @@ body {
 }
 
 
+a {
+    color: var(--white)
+}
 
 .message {
     width: 100%;

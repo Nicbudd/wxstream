@@ -50,10 +50,10 @@ function addNewRawMessage(feed: Feed, message: any) {
     const time = dayjs(message["ts"] + " +0000", "YYYY-MM-DD HH:mm:ss ZZ")
     const formatted_time = time.utc().format("HH:mm:ss")
     // const time = "12:34:56";
-    txt = `<span class='time'>${formatted_time}</span> ${txt}`
-    
     const link = getLink(message["message"]);
-    feed.addMessage(txt, link)
+    txt = `<a class='time' href='${link}' target='_blank' rel='noopener noreferrer'>${formatted_time}</a> ${txt}`
+
+    feed.addMessage(txt)
 }
 
 // https://stackoverflow.com/questions/822452/strip-html-tags-from-text-using-plain-javascript/47140708#47140708

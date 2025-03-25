@@ -24,12 +24,12 @@ export class Feed {
         }
     }
 
-    addMessage(message: string, link: string) {
-        const e = document.createElement("a")
+    addMessage(message: string) {
+        const e = document.createElement("div")
         e.classList.add("message");
-        e.setAttribute("href", link);
-        e.setAttribute("target", "_blank");
-        e.setAttribute("rel", "noopener noreferrer"); 
+        // e.setAttribute("href", link);
+        // e.setAttribute("target", "_blank");
+        // e.setAttribute("rel", "noopener noreferrer"); 
         // thanks https://stackoverflow.com/questions/17711146/how-to-open-link-in-a-new-tab-in-html
         e.innerHTML = message
         this.element.prepend(e);
@@ -57,8 +57,10 @@ interface FeedConfiguration {
     themes: Array<[RegExp, Array<ThemeClass>]>;
 }
 
-export type ThemeClass = "red" | "green" | "blue" | "purple" | "orange" | "black" | "white" |
-    "redbg" | "greenbg" | "bluebg" | "purplebg" | "orangebg" | "blackbg" | "whitebg" | 
+export type ThemeClass = "red" | "green" | "blue" | "purple" | "orange" |
+    "black" | "white" | "lightgray" | "gray" |
+    "redbg" | "greenbg" | "bluebg" | "purplebg" | "orangebg" | "blackbg" | 
+    "whitebg" | "lightgraybg" | "graybg" | 
     "bold" | "extra-bold" | "emergency";
 
 // light configuration
