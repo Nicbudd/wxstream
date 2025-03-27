@@ -25,6 +25,9 @@ export class Poller {
     addFeed(feed: Feed) {
         this.feeds.push(feed)
     }
+    removeFeed(feed: Feed) {
+        this.feeds = this.feeds.filter(f => f !== feed);
+    }
     suspend() {
         this.suspended = true
     }

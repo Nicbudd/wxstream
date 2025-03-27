@@ -83,61 +83,61 @@ const winter_whitelist = [/(winter|snow|sleet|graupel|wintry|freeze|freezing)/gi
 const metar_whitelist = [/(?<!\w)(metar|speci)(?!\w)/gi]
 
 export const prebuiltFeeds = {
-    default: {
+    "default": {
         channels: ["botstalk"],
         whitelist: [],
         blacklist: standard_blacklist,
         themes: standard_themes
     },
-    box: {
+    "box": {
         channels: ["boxchat"],
         whitelist: [],
         blacklist: standard_blacklist,
         themes: standard_themes
     },
-    gyx: {
+    "gyx": {
         channels: ["gyxchat"],
         whitelist: [],
         blacklist: standard_blacklist,
         themes: standard_themes
     },
-    test: {
+    "test": {
         channels: ["test"],
         whitelist: [],
         blacklist: standard_blacklist,
         themes: standard_themes
     },
-    severe: {
+    "severe": {
         channels: ["botstalk"],
         whitelist: severe_whitelist,
         blacklist: standard_blacklist,
         themes: standard_themes
     },
-    tornado: {
+    "tornado": {
         channels: ["botstalk"],
         whitelist: tornado_whitelist,
         blacklist: standard_blacklist,
         themes: standard_themes
     },
-    winter: {
+    "winter": {
         channels: ["botstalk"],
         whitelist: winter_whitelist,
         blacklist: standard_blacklist,
         themes: standard_themes
     },
-    fire: {
+    "fire": {
         channels: ["botstalk"],
         whitelist: fire_whitelist,
         blacklist: standard_blacklist,
         themes: standard_themes
     },
-    all: {
+    "all": {
         channels: ["botstalk"],
         whitelist: [],
         blacklist: [],
         themes: standard_themes
     },
-    metar: {
+    "metar": {
         channels: ["botstalk"],
         whitelist: metar_whitelist,
         blacklist: [],
