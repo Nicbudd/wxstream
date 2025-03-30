@@ -49,6 +49,7 @@ const standard_themes: Array<[RegExp, Array<ThemeClass>]> = [
     // fire
     [/(wildfire|fire)/gi, ["red"]],
     [/red flag warning/gi, ["red"]],
+    
 
     // hail size
     [/hail:?\s*(of\s*)?[><+-]?\d+\.?\d*\s?(inches|inch|in)(hail)?/gi, ["blue"]],
