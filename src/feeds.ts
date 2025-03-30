@@ -105,12 +105,12 @@ export function addToFeedGrid(element: HTMLDivElement) {
     // g.css("grid-template-columns", `repeat(${len}, minmax(0, 1fr))`)
 }
 
-// export function removeFromFeedGrid(element: HTMLDivElement) {
-//     var g = $("#feedgrid")
-//     g.append(element)
-//     // var len = g.children().length
-//     // g.css("grid-template-columns", `repeat(${len}, minmax(0, 1fr))`)
-// }
+export function removeFromFeedGrid(element: HTMLDivElement) {
+    var g = $("#feedgrid")
+    element.remove()
+    // var len = g.children().length
+    // g.css("grid-template-columns", `repeat(${len}, minmax(0, 1fr))`)
+}
 
 interface FeedConfiguration {
     channels: Array<string>;

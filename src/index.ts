@@ -17,7 +17,7 @@ const PollingInterval = 5*1000;
 $(function() {
     // new Feed(prebuiltFeeds["all"], feeds, pollers, PollingInterval);
     new Feed(prebuiltFeeds["default"], "default", feeds, pollers, PollingInterval);
-    new Feed(prebuiltFeeds["severe"], "severe", feeds, pollers, PollingInterval);
+    new Feed(prebuiltFeeds["gyx"], "gyx", feeds, pollers, PollingInterval);
     new Feed(prebuiltFeeds["tornado"], "tornado", feeds, pollers, PollingInterval);
     
     const idleTracker = new IdleTracker({
