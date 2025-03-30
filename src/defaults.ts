@@ -61,8 +61,6 @@ const standard_themes: Array<[RegExp, Array<ThemeClass>]> = [
 
     // ice accumulation
     [/(freezing rain|ice (acc|accumulation)?)\s*(of\s*)?[><+-]?\d+\.?\d*\s?(inches|inch|in|)(of)?(ice)?/gi, ["bold", "whitebg", "purple"]],
-    // [/(freezing rain|ice (acc|accumulation)?)\s*(of\s*)?[><+-]?\d+\.?\d*\s?(inches|inch|in|)(of)?(ice)?/gi, ["bold", "whitebg", "purple"]],
-
 
     // reports of damage
     [/DMG|damage/gi, ["purplebg", "black"]],
