@@ -27,6 +27,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     background-color: var(--black);
+    z-index: 1;
 }
 
 #mainmenu button {
@@ -337,4 +338,28 @@ a {
 #addmenu button:hover {
     background-color: var(--black);
     color: var(--white);
+}
+
+
+#bg-msg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 0;
+}
+
+#bg-msg h1 {
+    font-size: 3em;
+    font-weight: 700;
+    color: var(--black);
+    text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+    #bg-msg h1 {
+        font-size: 2em;
+    }
 }
