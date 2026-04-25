@@ -1,0 +1,598 @@
+/*!*****************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/style.css ***!
+  \*****************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap);
+/*!*****************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/IosevkaNicbuddSansV1/IosevkaNicbuddSansV1.css ***!
+  \*****************************************************************************************************/
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 400;
+	font-stretch: normal;
+	font-style: normal;
+	src: url(fonts/IosevkaNicbuddSansV1-Regular.woff2) format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 400;
+	font-stretch: expanded;
+	font-style: normal;
+	src: url(fonts/IosevkaNicbuddSansV1-Extended.woff2) format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 400;
+	font-stretch: condensed;
+	font-style: normal;
+	src: url(fonts/IosevkaNicbuddSansV1-Condensed.woff2) format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 700;
+	font-stretch: normal;
+	font-style: normal;
+	src: url(fonts/IosevkaNicbuddSansV1-Bold.woff2) format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 700;
+	font-stretch: expanded;
+	font-style: normal;
+	src: url(fonts/IosevkaNicbuddSansV1-ExtendedBold.woff2) format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 700;
+	font-stretch: condensed;
+	font-style: normal;
+	src: url(fonts/IosevkaNicbuddSansV1-CondensedBold.woff2) format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 900;
+	font-stretch: normal;
+	font-style: normal;
+	src: url(fonts/IosevkaNicbuddSansV1-Heavy.woff2) format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 900;
+	font-stretch: expanded;
+	font-style: normal;
+	src: url(fonts/IosevkaNicbuddSansV1-ExtendedHeavy.woff2) format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Sans v1 Web';
+	font-display: swap;
+	font-weight: 900;
+	font-stretch: condensed;
+	font-style: normal;
+	src: url(fonts/IosevkaNicbuddSansV1-CondensedHeavy.woff2) format('woff2')
+}
+/*!*****************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/IosevkaNicbuddSlabV1/IosevkaNicbuddSlabV1.css ***!
+  \*****************************************************************************************************/
+@font-face {
+	font-family: 'Iosevka Nicbudd Slab v1 Web';
+	font-display: swap;
+	font-weight: 400;
+	font-stretch: normal;
+	font-style: normal;
+	src: url(fonts/IosevkaNicbuddSlabV1-Regular.woff2) format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Slab v1 Web';
+	font-display: swap;
+	font-weight: 400;
+	font-stretch: expanded;
+	font-style: normal;
+	src: url(fonts/IosevkaNicbuddSlabV1-Extended.woff2) format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Slab v1 Web';
+	font-display: swap;
+	font-weight: 400;
+	font-stretch: condensed;
+	font-style: normal;
+	src: url(fonts/IosevkaNicbuddSlabV1-Condensed.woff2) format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Slab v1 Web';
+	font-display: swap;
+	font-weight: 700;
+	font-stretch: normal;
+	font-style: normal;
+	src: url(fonts/IosevkaNicbuddSlabV1-Bold.woff2) format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Slab v1 Web';
+	font-display: swap;
+	font-weight: 700;
+	font-stretch: expanded;
+	font-style: normal;
+	src: url(fonts/IosevkaNicbuddSlabV1-ExtendedBold.woff2) format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Slab v1 Web';
+	font-display: swap;
+	font-weight: 700;
+	font-stretch: condensed;
+	font-style: normal;
+	src: url(fonts/IosevkaNicbuddSlabV1-CondensedBold.woff2) format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Slab v1 Web';
+	font-display: swap;
+	font-weight: 900;
+	font-stretch: normal;
+	font-style: normal;
+	src: url(fonts/IosevkaNicbuddSlabV1-Heavy.woff2) format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Slab v1 Web';
+	font-display: swap;
+	font-weight: 900;
+	font-stretch: expanded;
+	font-style: normal;
+	src: url(fonts/IosevkaNicbuddSlabV1-ExtendedHeavy.woff2) format('woff2')
+}
+
+@font-face {
+	font-family: 'Iosevka Nicbudd Slab v1 Web';
+	font-display: swap;
+	font-weight: 900;
+	font-stretch: condensed;
+	font-style: normal;
+	src: url(fonts/IosevkaNicbuddSlabV1-CondensedHeavy.woff2) format('woff2')
+}
+/*!**********************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/textThemes.css ***!
+  \**********************************************************************/
+.purple {
+    color: #7c56b5 !important;
+}
+.purplebg {
+    background: #7c56b5 !important;
+}
+
+.blue {
+    color: #316fa6 !important;
+}
+.bluebg {
+    background: #316fa6 !important;
+}
+
+.green {
+    color: #3ba769 !important;
+}
+.greenbg {
+    background: #3ba769 !important;
+}
+
+.red {
+    color: #c14747 !important;
+}
+.redbg {
+    background: #c14747 !important;
+}
+
+.orange {
+    color: #bf8060 !important;
+}
+.orangebg {
+    background: #bf8060 !important;
+}
+
+.white {
+    color: #e6e6e6 !important;
+}
+.whitebg {
+    background: #e6e6e6 !important;
+}
+
+.gray {
+    color: #949494 !important;
+}
+.graybg {
+    background: #949494 !important;
+}
+
+.lightgray {
+    color: #c3c3c3 !important;
+}
+.lightgraybg {
+    background: #c3c3c3 !important;
+}
+
+.black {
+    color: #303030 !important;
+}
+.blackbg {
+    background: #303030 !important;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.extra-bold {
+    font-weight: 900;
+}
+
+.emergency {
+    font-weight: 900;
+    animation: emergency 3s infinite;
+}
+
+@keyframes emergency {
+    0%, 100% {
+        color: var(--black);
+        background-color: var(--red);
+    }
+    50% {
+        color: var(--red);
+        background-color: var(--white);
+    }
+}
+/*!*********************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/style.css (1) ***!
+  \*********************************************************************/
+:root {
+    --white: #E6E6E6;
+    --lightGray: #C3C3C3;
+    --darkGray: #949494;
+    --black: #303030;
+    --red: #C14747;
+    --green: #3BA769;
+    --blue: #316FA6;
+    --menuheight: 30px;
+    --menugap: 4px;
+    --itemcount: 2;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#mainmenu {
+    height: var(--menuheight);
+    position: fixed;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: var(--black);
+}
+
+#mainmenu button {
+    width: var(--menuheight);
+    height: var(--menuheight);
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.2s, background 0.2s;
+}
+
+
+.titlebar button {
+    margin: 0 4px 0 0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: color 0.2s, background 0.2s;
+    background-color: var(--black);
+    color: var(--white);
+    border: none;
+    font-family: inherit;
+    font-size: 1em;
+    font-weight: 700;
+}
+
+.titlebar button:hover {
+    font-weight: 900;
+}
+
+.titlebar {
+    grid-template-columns: 1fr 1fr 1fr;
+    display: grid;
+}
+
+.titlebar .left {
+    justify-content: left;
+}
+
+.titlebar .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titlebar .right {
+    display: flex;
+    justify-content: right;
+}
+
+#mainmenu .title {
+    font-weight: 700;
+    font-size: 22px;
+}
+
+#feedgrid {
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: repeat(var(--itemcount), calc(100% / var(--itemcount) - (4px * ((var(--itemcount) - 1) / var(--itemcount)))));
+    padding: 0;
+    margin: 0;
+    row-gap: 4px;
+    column-gap: 4px;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    bottom: 0px;
+    min-height: calc(100% - var(--menuheight) - var(--menugap));
+    max-height: calc(100% - var(--menuheight) - var(--menugap));
+}
+
+@media screen and (max-width: 1200px) {
+    #feedgrid {
+        grid-template-rows: repeat(var(--itemcount), calc(100% / var(--itemcount)));
+        grid-template-columns: 100%;
+    }
+}
+
+.feedcontainer {
+    margin: 0;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-rows: 30px auto;
+}
+
+.feed {
+    margin: 0;
+    padding: 8px;
+    background: #303030;
+    display: block;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.feedcontainer .titlebar {
+    background-color: var(--black);
+    color: var(--darkGray);
+    font-size: 1.5em;
+    font-weight: 700;
+    width: 100%;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background: #949494;
+    font-weight: normal;
+    font-size: 0.85em;
+
+    /* font-stretch: expanded; */
+    /* font-family: "Iosevka Nicbudd Slab v1 Web", "Iosevka Nicbudd Sans v1 Web", Inconsolata, Monospace;  */
+
+    font-stretch: normal;
+    font-family: "Iosevka Nicbudd Sans v1 Web", Inconsolata, Monospace;
+
+    color: #e6e6e6;
+}
+
+
+a {
+    color: var(--white)
+}
+
+.message {
+    width: 100%;
+    display: block;
+    color: var(--white);
+    text-decoration: none;
+    padding: 2px 0;
+}
+
+.message.error {
+    color: var(--red)
+}
+
+.message:hover {
+    font-weight: 800;
+}
+
+.blinker {
+    transition: background 2s;
+    background-color: #949494;
+    position: fixed;
+    display: block;
+    left: 24px;
+    top: 24px;
+    width: 16px;
+    height: 16px;
+    border-radius: 200px;
+    z-index: 3;
+}
+
+.poll {
+    transition: background 5s;
+    background-color: #949494;
+    position: fixed;
+    display: block;
+    left: 24px;
+    top: 24px;
+    width: 16px;
+    height: 16px;
+    border-radius: 200px;
+    z-index: 2;
+}
+
+
+@keyframes blink {
+    0% {
+        background-color: #3ba769;
+    }
+
+    100% {
+        background-color: #3ba769;
+        opacity: 0;
+        width: 48px;
+        height: 48px;
+        transform: translate(-16px, -16px);
+    }
+}
+
+.blinkAnimation {
+    transition: background 0s;
+    animation: blink 2s ease-out;
+}
+
+.responseWait {
+    background: #c14747 !important;
+}
+
+#idlescreen {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(16px);
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#idlescreen .title {
+    font-weight: 900;
+    font-size: 32px;
+    padding: 0 1em;
+}
+
+#idlescreen .content {
+    font-size: 16px;
+    padding: 0 1em;
+}
+
+.none {
+    display: none !important;
+}
+
+.time {
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+#info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    backdrop-filter: brightness(40%) blur(2px);
+    z-index: 3;
+}
+
+#info .infobox {
+    display: inline-block;
+    max-width: 60%;
+    padding: 0px 32px;
+    background-color: var(--black);
+    text-align: center;
+    font-size: 1em;
+}
+
+#info .infobox li {
+    text-align: left;
+}
+
+@media screen and (max-width: 800px) {
+    #info .infobox {
+        max-width: 90%;
+        font-size: 1em;
+    }
+}
+
+#info .infobox a {
+    color: var(--blue)
+}
+
+
+
+
+#addmenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    backdrop-filter: brightness(40%);
+    z-index: 4;
+}
+
+#addmenu .infobox {
+    display: inline-block;
+    max-width: 50%;
+    padding: 0px 32px;
+    background-color: var(--black);
+    text-align: center;
+    font-size: 1.2em;
+}
+
+@media screen and (max-width: 800px) {
+    #addmenu .infobox {
+        max-width: 100%;
+        font-size: 1em;
+    }
+}
+
+#addmenu button {
+    /* width: var(--menuheight);
+    height: var(--menuheight); */
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.2s, background 0.2s;
+    margin: 4px;
+    padding: 4px 8px;
+    border-radius: 8px;
+    background-color: var(--darkGray);
+    color: var(--black);
+    /* border: 1px solid var(--white); */
+    border: none;
+    font-family: inherit;
+    font-size: 1em;
+    font-weight: 700;
+}
+
+#addmenu button:hover {
+    background-color: var(--black);
+    color: var(--white);
+}
