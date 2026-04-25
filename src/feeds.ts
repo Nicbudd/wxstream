@@ -59,9 +59,13 @@ export class Feed {
                 poller.addFeed(this)
             }
         }
+
+        feeds.push(this)
     }
 
     remove(feeds: Array<Feed>, pollers: Map<string, Poller>) {
+        console.log(feeds);
+
         for (const ch of this.config.channels) {
             var poller = pollers.get(ch);
             if (poller !== undefined) {
@@ -69,14 +73,23 @@ export class Feed {
             }
         }
 
-        feeds = feeds.filter(f => f !== this);
+        var index = feeds.findIndex(f => f == this);
+        console.log(index);
+        feeds.splice(index, 1);
+        console.log(feeds);
 
         this.container.remove();
+
+        $(":root").css("--itemcount", feeds.length);
     }
 
     openConfig() {
         // alert("config!")
         console.log("Config clicked.")
+    }
+
+    clear() {
+        this.element.innerHTML = ""
     }
 
     addMessage(message: string) {
@@ -121,8 +134,8 @@ interface FeedConfiguration {
 
 export type ThemeClass = "red" | "green" | "blue" | "purple" | "orange" |
     "black" | "white" | "lightgray" | "gray" |
-    "redbg" | "greenbg" | "bluebg" | "purplebg" | "orangebg" | "blackbg" | 
-    "whitebg" | "lightgraybg" | "graybg" | 
+    "redbg" | "greenbg" | "bluebg" | "purplebg" | "orangebg" | "blackbg" |
+    "whitebg" | "lightgraybg" | "graybg" |
     "bold" | "extra-bold" | "emergency";
 
 // light configuration

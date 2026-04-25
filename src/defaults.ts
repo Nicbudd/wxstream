@@ -1,7 +1,7 @@
 import { ThemeClass } from "./feeds"
 
-const standard_blacklist = [/PIREP/, /Climate Report:/, /Routine pilot report/, 
-    /Terminal Aerodrome Forecast/, /SIGMET/, /Zone Forecast Package \(ZFP\)/, 
+const standard_blacklist = [/PIREP/, /Climate Report:/, /Routine pilot report/,
+    /Terminal Aerodrome Forecast/, /SIGMET/, /Zone Forecast Package \(ZFP\)/,
     /Area Forecast Discussion/, /^METAR/, /^SPECI/, /Recreational Forecast \(REC\)/,
     /Fire Weather Planning Forecast \(FWF\)/, /center issues .+ for portions of [a-z]{3}'s area/i]
 
@@ -11,7 +11,7 @@ const standard_themes: Array<[RegExp, Array<ThemeClass>]> = [
     [/(?<!\w)(NH|ME|VT|MA|MASS|CT|RI)(?!\w)/gi, ["bold"]],
     // local WFOs
     [/(?<!\w)(GYX|BOX|BOS|BTV)(?!\w)/gi, ["bold"]],
-    
+
     // Tornado emergency
     [/(?<!(expires|cancels) )(tornado emergency)/gi, ["emergency"]],
     // PDS (not sure if this will work)
@@ -21,12 +21,12 @@ const standard_themes: Array<[RegExp, Array<ThemeClass>]> = [
     // Severe thunderstorm warnings with tornado possible
     [/(?<!(expires|cancels) )(tornado: possible)/gi, ["red", "bold"]],
     // confirmed tornado on the ground
-    [/(tornado: radar indicated|tornado: observed|confirmed tornado)/gi, ["redbg", "black", "bold"]],
+    [/(tornado: observed|confirmed tornado)/gi, ["redbg", "black", "bold"]],
     // tornado warning
     [/(?<!(expires|cancels) )(tornado warning)/gi, ["redbg", "black"]],
     // other mentions of tornado
     [/(?<!confirmed )tornado(?!( warning|: radar indicated|: observed| watch|: possible| emergency))/gi, ["red"]],
-    
+
     // severe thunderstorm warning
     [/(?<!(expires|cancels) )severe thunderstorm warning/gi, ["orangebg", "black"]],
     // severe thunderstorm watch
@@ -40,11 +40,11 @@ const standard_themes: Array<[RegExp, Array<ThemeClass>]> = [
     [/(?<!(expires|cancels) )(winter storm warning|winter storm(?! watch)|winter weather advisory|winter weather(?! watch))/gi, ["bluebg"]],
 
     // flash flood warning
-    [/(?<!(expires|cancels) )(flash flood warning)/gi, ["greenbg", "bold"]], 
+    [/(?<!(expires|cancels) )(flash flood warning)/gi, ["greenbg", "bold"]],
     // flood warning
-    [/(?<!(expires|cancels|flash) )(flood warning)/gi, ["greenbg", "black"]], 
+    [/(?<!(expires|cancels|flash) )(flood warning)/gi, ["greenbg", "black"]],
     // flood warning
-    [/flood(ing)? (?!(warning|cancels))/gi, ["blue"]], 
+    [/flood(ing)? (?!(warning|cancels))/gi, ["blue"]],
 
     // fire
     [/(wildfire|fire)/gi, ["red"]],
@@ -66,7 +66,7 @@ const standard_themes: Array<[RegExp, Array<ThemeClass>]> = [
     [/DMG|damage/gi, ["purplebg", "black"]],
 
     // wind speeds
-    [/(sust |sustained |peak )?(gust|wind|winds)?\:? ?(of )?M?(\d{2}G)?\d+\.?\d*\s?(mph|kts|kt|knots|knot)/gi, ["green"]], 
+    [/(sust |sustained |peak )?(gust|wind|winds)?\:? ?(of )?M?(\d{2}G)?\d+\.?\d*\s?(mph|kts|kt|knots|knot)/gi, ["green"]],
 
     // reports
     [/(?<=\] )(.* reports ((tstm|wnd|gst|non-tstm|gust|snow|hail) )*)/gi, ["purple"]],
@@ -86,63 +86,73 @@ const metar_whitelist = [/(?<!\w)(metar|speci)(?!\w)/gi]
 
 export const prebuiltFeeds = {
     "default": {
+        name: "Default",
         channels: ["botstalk"],
         whitelist: [],
         blacklist: standard_blacklist,
         themes: standard_themes
     },
-    "box": {
-        channels: ["boxchat"],
-        whitelist: [],
-        blacklist: standard_blacklist,
-        themes: standard_themes
-    },
-    "gyx": {
-        channels: ["gyxchat"],
-        whitelist: [],
-        blacklist: standard_blacklist,
-        themes: standard_themes
-    },
-    "test": {
-        channels: ["test"],
-        whitelist: [],
-        blacklist: standard_blacklist,
-        themes: standard_themes
-    },
     "severe": {
+        name: "Severe",
         channels: ["botstalk"],
         whitelist: severe_whitelist,
         blacklist: standard_blacklist,
         themes: standard_themes
     },
     "tornado": {
+        name: "Tornado",
         channels: ["botstalk"],
         whitelist: tornado_whitelist,
         blacklist: standard_blacklist,
         themes: standard_themes
     },
     "winter": {
+        name: "Winter",
         channels: ["botstalk"],
         whitelist: winter_whitelist,
         blacklist: standard_blacklist,
         themes: standard_themes
     },
     "fire": {
+        name: "Fire",
         channels: ["botstalk"],
         whitelist: fire_whitelist,
         blacklist: standard_blacklist,
         themes: standard_themes
     },
+    "metar": {
+        name: "METARs",
+        channels: ["botstalk"],
+        whitelist: metar_whitelist,
+        blacklist: [],
+        themes: standard_themes
+    },
+    "damage": {
+        name: "Damage Reports",
+        channels: ["botstalk"],
+        whitelist: [/damage/gi, /report/gi],
+        blacklist: standard_blacklist,
+        themes: standard_themes
+    },
     "all": {
+        name: "All",
         channels: ["botstalk"],
         whitelist: [],
         blacklist: [],
         themes: standard_themes
     },
-    "metar": {
-        channels: ["botstalk"],
-        whitelist: metar_whitelist,
-        blacklist: [],
+    "box": {
+        name: "BOX (NWS Boston)",
+        channels: ["boxchat"],
+        whitelist: [],
+        blacklist: standard_blacklist,
         themes: standard_themes
-    }
+    },
+    "gyx": {
+        name: "GYX (NWS Gray, ME)",
+        channels: ["gyxchat"],
+        whitelist: [],
+        blacklist: standard_blacklist,
+        themes: standard_themes
+    },
 }

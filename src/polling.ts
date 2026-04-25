@@ -18,12 +18,13 @@ export class Poller {
         this.seqnum = 0;
         this.suspended = false;
         this.feeds.push(feed);
-        pollChannel(this);
-        setInterval(pollChannel, poll_freq, this)
+        pollChannel(this, true);
+        setInterval(pollChannel, poll_freq, this, false)
     }
 
     addFeed(feed: Feed) {
         this.feeds.push(feed)
+        this.repoll();
     }
     removeFeed(feed: Feed) {
         this.feeds = this.feeds.filter(f => f !== feed);
@@ -34,24 +35,28 @@ export class Poller {
     unsuspend() {
         this.suspended = false
     }
+    repoll() {
+        this.seqnum = 0;
+        pollChannel(this, true);
+    }
 }
 
-function pollChannel(poller: Poller) {
-    
+function pollChannel(poller: Poller, clearFeeds: Boolean) {
+
     if (poller.feeds.length <= 0) {
         return
     }
     if (poller.suspended) {
         return
     }
-    
+
     console.log(`Pinging channel ${poller.channel}`)
 
     if (poller.channel == "test") {
         for (const f of poller.feeds) {
             var msgs: Array<Object> = [];
             for (const txt of test_msgs) {
-                msgs.push({"message": txt, "ts": "2000-01-01 00:00:00", "seqnum": 0})
+                msgs.push({ "message": txt, "ts": "2000-01-01 00:00:00", "seqnum": 0 })
             }
             addNewRawMessages(f, msgs)
         }
@@ -59,25 +64,28 @@ function pollChannel(poller: Poller) {
     }
 
     var req = $.ajax({
-        dataType : "json",
+        dataType: "json",
         url: `${proxy_url}?https://weather.im/iembot-json/room/${poller.channel}?seqnum=${poller.seqnum}`,
         // upon success do this
-        success: function(data) {
+        success: function (data) {
             const channel_messages = data["messages"]
 
             if (channel_messages.length > 0) {
                 poller.seqnum = channel_messages.at(-1)["seqnum"]
                 console.log("New messages:", channel_messages, poller.seqnum)
-                            
+
                 for (const f of poller.feeds) {
+                    if (clearFeeds) {
+                        f.clear();
+                    }
                     addNewRawMessages(f, channel_messages)
                 }
             }
 
         }
-    }).fail(function() {
+    }).fail(function () {
         for (const f of poller.feeds) {
-            f.addErrorMessage(`Failed to access data from channel [${poller}].`) 
+            f.addErrorMessage(`Failed to access data from channel [${poller}].`)
         }
     })
 }
@@ -93,4 +101,4 @@ const test_msgs = [
     "4 ENE Hanover [Oxford Co, ME] Fire Dept/Rescue reports Ice Jam at 10:00 AM EDT -- A mile long ice jam was present along the Androscoggin River along Rumford Center. The jam was not resulting in flooding at the time of the report."
 ]
 
-const proxy_url="https://cloudflare-cors-anywhere.niczippy775894.workers.dev/"
+const proxy_url = "https://cloudflare-cors-anywhere.niczippy775894.workers.dev/"

@@ -3,16 +3,17 @@
 @import url('./IosevkaNicbuddSlabV1/IosevkaNicbuddSlabV1.css');
 @import url('./textThemes.css');
 
-:root{
-	--white: #E6E6E6;
-	--lightGray: #C3C3C3;
-	--darkGray: #949494;
-	--black: #303030;
-	--red: #C14747;
-	--green: #3BA769;
-	--blue: #316FA6;
+:root {
+    --white: #E6E6E6;
+    --lightGray: #C3C3C3;
+    --darkGray: #949494;
+    --black: #303030;
+    --red: #C14747;
+    --green: #3BA769;
+    --blue: #316FA6;
     --menuheight: 30px;
     --menugap: 4px;
+    --itemcount: 2;
 }
 
 * {
@@ -25,31 +26,17 @@
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    /* flex-wrap: nowrap; */
-    /* justify-content: center; */
-    /* align-items: center; */
     background-color: var(--black);
 }
 
 #mainmenu button {
-    /* margin: 0 4px 0 0; */
-    /* padding: 4px; */
-    /* padding: 0 -2px; */
-    /* border: none; */
     width: var(--menuheight);
     height: var(--menuheight);
-    /* background-color: var(--black); */
-    /* color: var(--white); */
-    /* border-radius: 8px; */
     font-size: 24px;
     cursor: pointer;
     transition: color 0.2s, background 0.2s;
 }
 
-/* #mainmenu button:hover {
-    background-color: var(--white);
-    color: var(--black);
-} */
 
 .titlebar button {
     margin: 0 4px 0 0;
@@ -74,7 +61,7 @@
 }
 
 .titlebar .left {
-    justify-content:left;
+    justify-content: left;
 }
 
 .titlebar .center {
@@ -96,14 +83,13 @@
 #feedgrid {
     display: grid;
     grid-template-rows: 100%;
-    grid-template-columns: repeat(3, 33.33333%);
+    grid-template-columns: repeat(var(--itemcount), calc(100% / var(--itemcount) - (4px * ((var(--itemcount) - 1) / var(--itemcount)))));
     padding: 0;
     margin: 0;
     row-gap: 4px;
     column-gap: 4px;
     width: 100%;
     height: 100%;
-    /* height: calc(100% - 20px); */
     position: fixed;
     bottom: 0px;
     min-height: calc(100% - var(--menuheight) - var(--menugap));
@@ -112,7 +98,7 @@
 
 @media screen and (max-width: 1200px) {
     #feedgrid {
-        grid-template-rows: repeat(3, 33.33333%);
+        grid-template-rows: repeat(var(--itemcount), calc(100% / var(--itemcount)));
         grid-template-columns: 100%;
     }
 }
@@ -134,7 +120,6 @@
     height: 100%;
     display: flex;
     flex-direction: column-reverse;
-    /* flex-wrap: wrap; */
     align-items: flex-end;
     overflow-y: auto;
     scrollbar-width: none;
@@ -157,9 +142,9 @@ body {
 
     /* font-stretch: expanded; */
     /* font-family: "Iosevka Nicbudd Slab v1 Web", "Iosevka Nicbudd Sans v1 Web", Inconsolata, Monospace;  */
-    
+
     font-stretch: normal;
-    font-family: "Iosevka Nicbudd Sans v1 Web", Inconsolata, Monospace; 
+    font-family: "Iosevka Nicbudd Sans v1 Web", Inconsolata, Monospace;
 
     color: #e6e6e6;
 }
@@ -213,8 +198,17 @@ a {
 
 
 @keyframes blink {
-    0%   {background-color: #3ba769;}
-    100% {background-color: #3ba769; opacity: 0; width: 48px; height: 48px; transform: translate(-16px, -16px);}
+    0% {
+        background-color: #3ba769;
+    }
+
+    100% {
+        background-color: #3ba769;
+        opacity: 0;
+        width: 48px;
+        height: 48px;
+        transform: translate(-16px, -16px);
+    }
 }
 
 .blinkAnimation {
@@ -268,13 +262,13 @@ a {
     z-index: 3;
 }
 
-#info .infobox  {
+#info .infobox {
     display: inline-block;
-    max-width: 50%;
+    max-width: 60%;
     padding: 0px 32px;
     background-color: var(--black);
     text-align: center;
-    font-size: 1.2em;
+    font-size: 1em;
 }
 
 #info .infobox li {
@@ -283,11 +277,64 @@ a {
 
 @media screen and (max-width: 800px) {
     #info .infobox {
-        max-width: 80%;
+        max-width: 90%;
         font-size: 1em;
     }
 }
 
 #info .infobox a {
     color: var(--blue)
+}
+
+
+
+
+#addmenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    backdrop-filter: brightness(40%);
+    z-index: 4;
+}
+
+#addmenu .infobox {
+    display: inline-block;
+    max-width: 50%;
+    padding: 0px 32px;
+    background-color: var(--black);
+    text-align: center;
+    font-size: 1.2em;
+}
+
+@media screen and (max-width: 800px) {
+    #addmenu .infobox {
+        max-width: 100%;
+        font-size: 1em;
+    }
+}
+
+#addmenu button {
+    /* width: var(--menuheight);
+    height: var(--menuheight); */
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.2s, background 0.2s;
+    margin: 4px;
+    padding: 4px 8px;
+    border-radius: 8px;
+    background-color: var(--darkGray);
+    color: var(--black);
+    /* border: 1px solid var(--white); */
+    border: none;
+    font-family: inherit;
+    font-size: 1em;
+    font-weight: 700;
+}
+
+#addmenu button:hover {
+    background-color: var(--black);
+    color: var(--white);
 }
